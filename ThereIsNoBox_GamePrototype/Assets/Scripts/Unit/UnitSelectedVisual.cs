@@ -18,12 +18,12 @@ public class UnitSelectedVisual : MonoBehaviour
         UpdateVisual();
     }
 
-    private void OnSelectedUnitChanged(object sender, System.EventArgs e)
+    void OnSelectedUnitChanged(object sender, System.EventArgs e)
     {
         UpdateVisual();
     }
 
-    private void UpdateVisual()
+    void UpdateVisual()
     {
         if (UnitActionSystem.Instance.GetSelectedUnit() == unit)
         {
