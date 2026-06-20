@@ -38,4 +38,9 @@ public class GridObject
     {
         return unitList;
     }
+
+    public bool OccupiedByUnit()
+    {
+        return unitList.Count > 0;
+    }
 }

@@ -1,45 +1,82 @@
+using System;
 using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    [SerializeField] Animator unitAnimator;
+    public static event EventHandler OnAnyActionPointsChanged;
 
-    Vector3 targetPosition;
+    [SerializeField] int actionPoints = 2;
+
     GridPosition currentPosition;
 
-    const string MOVE_ANIM = "IsMoving";
+    MoveAction moveAction;
+    SpinAction spinAction;
+    BaseAction[] baseActions;
+
+    int maxActionPoints;
 
     void Awake()
     {
-        targetPosition = transform.position;
+        moveAction = GetComponent<MoveAction>();
+        spinAction = GetComponent<SpinAction>();
+        baseActions = GetComponents<BaseAction>();
+    }
+
+    public bool TryUsePointsToTakeAction(BaseAction baseAction)
+    {
+        if (CanUsePointsToTakeAction(baseAction))
+        {
+            UseActionPoints(baseAction.GetActionPointsCost());
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool CanUsePointsToTakeAction(BaseAction baseAction)
+    {
+        return actionPoints >= baseAction.GetActionPointsCost();
+    }
+
+    public int GetActionPoints()
+    {
+        return actionPoints;
+    }
+
+    public MoveAction GetMoveAction()
+    {
+        return moveAction;
+    }
+
+    public SpinAction GetSpinAction()
+    {
+        return spinAction;
+    }
+
+    public BaseAction[] GetBaseActions()
+    {
+        return baseActions;
+    }
+
+    public GridPosition GetGridPosition()
+    {
+        return currentPosition;
     }
 
     void Start()
     {
         currentPosition = LevelGrid.Instance.GetGridPosition(transform.position);
         LevelGrid.Instance.AddUnitAtGridPosition(currentPosition, this);
+        
+        maxActionPoints = actionPoints;
+
+        TurnSystem.Instance.OnTurnChanged += OnTurnChanged;
     }
 
     void Update()
     {
-        float stopDistane = 0.1f;
-        if (Vector3.Distance(transform.position, targetPosition) > stopDistane)
-        {
-            Vector3 moveDirection = (targetPosition - transform.position).normalized;
-
-            float moveSpeed = 4f;
-            transform.position += moveDirection * moveSpeed * Time.deltaTime;
-
-            float rotateSpeed = 10f;
-            transform.forward = Vector3.Lerp(transform.forward, moveDirection, rotateSpeed * Time.deltaTime);
-
-            unitAnimator.SetBool(MOVE_ANIM, true);
-        }
-        else
-        {
-            unitAnimator.SetBool(MOVE_ANIM, false);
-        }
-
         GridPosition newPosition = LevelGrid.Instance.GetGridPosition(transform.position);
         if (newPosition != currentPosition)
         {
@@ -48,9 +85,17 @@ public class Unit : MonoBehaviour
         }
     }
 
-
-    public void MoveTo(Vector3 targetPosition)
+    void UseActionPoints(int amount)
     {
-        this.targetPosition = targetPosition;
+        actionPoints -= amount;
+
+        OnAnyActionPointsChanged?.Invoke(this, EventArgs.Empty);
+    }
+
+    void OnTurnChanged(object sender, EventArgs e)
+    {
+        actionPoints = maxActionPoints;
+
+        OnAnyActionPointsChanged?.Invoke(this, EventArgs.Empty);
     }
 }
