@@ -43,4 +43,12 @@ public class GridObject
     {
         return unitList.Count > 0;
     }
+
+    public Unit GetUnitAtPosition()
+    {
+        if (OccupiedByUnit())
+            return unitList[0];
+        else
+            return null;
+    }
 }

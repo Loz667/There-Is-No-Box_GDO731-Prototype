@@ -4,6 +4,9 @@ using UnityEngine;
 
 public abstract class BaseAction : MonoBehaviour
 {
+    public static event EventHandler OnAnyActionStarted;
+    public static event EventHandler OnAnyActionCompleted;
+
     protected Unit unit;
     protected bool isActive;
     protected Action onActionComplete;
@@ -28,5 +31,26 @@ public abstract class BaseAction : MonoBehaviour
     public virtual int GetActionPointsCost()
     {
         return 1;
+    }
+
+    public Unit GetUnit()
+    {
+        return unit;
+    }
+
+    protected void ActionStarted(Action onActionComplete)
+    {
+        isActive = true;
+        this.onActionComplete = onActionComplete;
+
+        OnAnyActionStarted?.Invoke(this, EventArgs.Empty);
+    }
+
+    protected void ActionCompleted()
+    {
+        isActive = false;
+        onActionComplete();
+
+        OnAnyActionCompleted?.Invoke(this, EventArgs.Empty);
     }
 }
