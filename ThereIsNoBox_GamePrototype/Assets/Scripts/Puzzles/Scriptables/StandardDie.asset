@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4387998b19e6cce47b0dfa2e5e3f9520, type: 3}
+  m_Name: StandardDie
+  m_EditorClassIdentifier: Assembly-CSharp::DieDefinition
+  faces:
+  - {fileID: 11400000, guid: e5ba79ad8752d28459f546b57b73ba1b, type: 2}
+  - {fileID: 11400000, guid: 35f97c29f847958498f223cf535527e8, type: 2}
+  - {fileID: 11400000, guid: 87738a5617223f84eb885278925396e7, type: 2}
+  - {fileID: 11400000, guid: 9b90058d5112ae74cb062859b7c38997, type: 2}
+  - {fileID: 11400000, guid: d6d0b3907272e604ea32a1184ab154a2, type: 2}
+  - {fileID: 11400000, guid: 288bcdd35b6ad7b4082a51576a0adb7a, type: 2}
