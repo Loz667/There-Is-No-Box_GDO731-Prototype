@@ -20,16 +20,20 @@ public class ShootAction : BaseAction
 
     public override List<GridPosition> GetValidGridPositionList()
     {
-        List<GridPosition> validGridPositionList = new List<GridPosition>();
-
         GridPosition unitCurrentPosition = unit.GetGridPosition();
+        return GetValidGridPositionList(unitCurrentPosition);
+    }
+
+    public List<GridPosition> GetValidGridPositionList(GridPosition gridPosition)
+    {
+        List<GridPosition> validGridPositionList = new List<GridPosition>();
 
         for (int x = -maxShootDistance; x <= maxShootDistance; x++)
         {
             for (int z = -maxShootDistance; z <= maxShootDistance; z++)
             {
                 GridPosition availableGridPositon = new GridPosition(x, z);
-                GridPosition validGridPosition = unitCurrentPosition + availableGridPositon;
+                GridPosition validGridPosition = gridPosition + availableGridPositon;
 
                 //Check for valid grid positions around unit, ignore out of bounds positions
                 if (!LevelGrid.Instance.IsValidGridPosition(validGridPosition)) continue;
@@ -70,6 +74,27 @@ public class ShootAction : BaseAction
     public Unit GetTargetUnit()
     {
         return targetUnit;
+    }
+
+    public int GetShootRange()
+    {
+        return maxShootDistance;
+    }
+
+    public override EnemyAIAction GetEnemyAIAction(GridPosition gridPosition)
+    {
+        Unit targetUnit = LevelGrid.Instance.GetUnitAtOccupiedPosition(gridPosition);
+
+        return new EnemyAIAction
+        {
+            gridPosition = gridPosition,
+            actionValue = 100 + Mathf.RoundToInt((1 - targetUnit.GetHealthNormalised()) * 100)
+        };
+    }
+
+    public int GetTargetCountAtGridPosition(GridPosition gridPosition)
+    {
+        return GetValidGridPositionList(gridPosition).Count;
     }
 
     enum State { Aiming, Shooting, Cooldown }
