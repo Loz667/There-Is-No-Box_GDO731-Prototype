@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
+    public static event EventHandler OnAnyUnitSpawned;
+    public static event EventHandler OnAnyUnitDead;
+
     public static event EventHandler OnAnyActionPointsChanged;
     public static event EventHandler OnAnyHealthPointsChanged;
     public static event EventHandler OnAnyMoralePointsChanged;
@@ -50,6 +53,11 @@ public class Unit : MonoBehaviour
         return spinAction;
     }
 
+    public ShootAction GetShootAction()
+    {
+        return shootAction;
+    }
+
     public BaseAction[] GetBaseActions()
     {
         return baseActions;
@@ -77,12 +85,33 @@ public class Unit : MonoBehaviour
         OnAnyHealthPointsChanged?.Invoke(this, EventArgs.Empty);
     }
 
+    public int GetHealth()
+    {
+        return healthSystem.GetHealth();
+    }
+
+    public float GetHealthNormalised()
+    {
+        return healthSystem.GetHealthNormalised();
+    }
+
     public void DamageMorale(int moraleAmount)
     {
         moraleSystem.DamageMorale(moraleAmount);
 
         OnAnyMoralePointsChanged?.Invoke(this, EventArgs.Empty);
     }
+
+    public int GetMorale()
+    {
+        return moraleSystem.GetMorale();
+    }
+
+    public float GetMoraleNormalised()
+    {
+        return moraleSystem.GetMoraleNormalised();
+    }
+
 
     [SerializeField] bool isEnemy;
     [SerializeField] int actionPoints = 2;
@@ -94,6 +123,7 @@ public class Unit : MonoBehaviour
 
     MoveAction moveAction;
     SpinAction spinAction;
+    ShootAction shootAction;
     BaseAction[] baseActions;
 
     int maxActionPoints;
@@ -105,6 +135,7 @@ public class Unit : MonoBehaviour
 
         moveAction = GetComponent<MoveAction>();
         spinAction = GetComponent<SpinAction>();
+        shootAction = GetComponent<ShootAction>();
         baseActions = GetComponents<BaseAction>();
     }
 
@@ -119,6 +150,8 @@ public class Unit : MonoBehaviour
 
         healthSystem.OnHealthDepleted += OnHealthDepleted;
         moraleSystem.OnMoraleDepleted += OnMoraleDepleted;
+
+        OnAnyUnitSpawned?.Invoke(this, EventArgs.Empty);
     }
 
     void Update()
@@ -126,8 +159,10 @@ public class Unit : MonoBehaviour
         GridPosition newPosition = LevelGrid.Instance.GetGridPosition(transform.position);
         if (newPosition != currentPosition)
         {
-            LevelGrid.Instance.UnitMovedGridPosition(this, currentPosition, newPosition);
+            GridPosition oldPosition = currentPosition;
             currentPosition = newPosition;
+
+            LevelGrid.Instance.UnitMovedGridPosition(this, oldPosition, newPosition);
         }
     }
 
@@ -152,12 +187,18 @@ public class Unit : MonoBehaviour
     void OnHealthDepleted(object sender, EventArgs e)
     {
         LevelGrid.Instance.RemoveUnitAtGridPosition(currentPosition, this);
+
         Destroy(gameObject);
+
+        OnAnyUnitDead?.Invoke(this, EventArgs.Empty);
     }
 
     void OnMoraleDepleted(object sender, EventArgs e)
     {
         LevelGrid.Instance.RemoveUnitAtGridPosition(currentPosition, this);
+
         Destroy(gameObject);
+
+        OnAnyUnitDead?.Invoke(this, EventArgs.Empty);
     }
 }

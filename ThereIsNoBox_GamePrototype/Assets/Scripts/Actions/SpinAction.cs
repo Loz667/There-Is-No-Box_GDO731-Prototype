@@ -28,7 +28,7 @@ public class SpinAction : BaseAction
 
     public override int GetActionPointsCost()
     {
-        return 2;
+        return 1;
     }
 
     public override void TakeAction(GridPosition gridPosition, Action onActionComplete)
@@ -43,5 +43,14 @@ public class SpinAction : BaseAction
         GridPosition unitGridPosition = unit.GetGridPosition();
 
         return new List<GridPosition> { unitGridPosition };
+    }
+
+    public override EnemyAIAction GetEnemyAIAction(GridPosition gridPosition)
+    {
+        return new EnemyAIAction
+        {
+            gridPosition = gridPosition,
+            actionValue = 0
+        };
     }
 }

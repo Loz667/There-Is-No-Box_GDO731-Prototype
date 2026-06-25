@@ -35,6 +35,11 @@ public class HealthSystem : MonoBehaviour
         return health;
     }
 
+    public float GetHealthNormalised()
+    {
+        return (float)health / maxHealth;
+    }
+
     void HealthDepleted()
     {
         OnHealthDepleted?.Invoke(this, EventArgs.Empty);

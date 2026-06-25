@@ -33,6 +33,11 @@ public class MoraleSystem : MonoBehaviour
         return morale;
     }
 
+    public float GetMoraleNormalised()
+    {
+        return (float)morale / maxMorale;
+    }
+
     void MoraleDepleted()
     {
         OnMoraleDepleted?.Invoke(this, EventArgs.Empty);
