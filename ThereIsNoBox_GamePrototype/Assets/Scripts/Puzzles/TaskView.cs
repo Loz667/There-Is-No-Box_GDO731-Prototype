@@ -2,11 +2,11 @@ using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
 
-public class Task : MonoBehaviour
+public class TaskView : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI diceValue;
     
-    [SerializeField] private List<DieTarget> targetSlots;
+    [SerializeField] private List<TaskSlotView> targetSlots;
     
     
     

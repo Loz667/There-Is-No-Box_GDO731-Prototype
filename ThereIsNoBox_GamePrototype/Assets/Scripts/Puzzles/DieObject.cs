@@ -6,8 +6,7 @@ public class DieObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 {
     private Transform source;
     CanvasGroup canvasGroup;
-    [field: SerializeField] public int Value { get; private set; }
-    
+   
     public event EventHandler<int> OnDieDragComplete;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -35,7 +34,7 @@ public class DieObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
 
-        DieTarget targetSlot = eventData.pointerEnter?.GetComponent<DieTarget>();
+        TaskSlotView targetSlot = eventData.pointerEnter?.GetComponent<TaskSlotView>();
         DieController sourceSlot = source.GetComponent<DieController>();
 
         if (targetSlot != null)
@@ -52,7 +51,7 @@ public class DieObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 sourceSlot.currentDie = null;
                 transform.SetParent(targetSlot.transform);
                 targetSlot.currentDie = gameObject;
-                targetSlot.UpdateTask(Value);
+                //targetSlot.UpdateTask(Value);
                 //OnDieDragComplete?.Invoke(this, Value);
                 
                 Destroy(source.gameObject);

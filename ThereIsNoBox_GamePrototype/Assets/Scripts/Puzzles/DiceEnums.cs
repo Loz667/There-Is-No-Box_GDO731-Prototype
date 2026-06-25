@@ -25,6 +25,20 @@ public class DiceEnums
         EIGHT
     }
 
+    public enum RollType
+    {
+        SCREW,
+        SPANNER,
+        HAMMER,
+        CROWBAR,
+        HIT,
+        CRIT,
+        MISS,
+        BLOCK,
+        SUCCESS,
+        NUMBER
+    }
+
     public enum DieType
     {
         Engineering,

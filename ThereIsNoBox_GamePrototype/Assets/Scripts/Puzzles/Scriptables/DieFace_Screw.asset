@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4014c49b65401cb4c919a3a3332444ce, type: 3}
-  m_Name: DieFace_D66
+  m_Name: DieFace_Screw
   m_EditorClassIdentifier: Assembly-CSharp::DieFace
-  rollType: 9
-  resultType: 16
-  image: {fileID: 2005874967, guid: 4492ba20a6e3024429686a6f5974827d, type: 3}
-  label: Six
-  value: 6
+  resultType: 0
+  image: {fileID: 21300000, guid: 4620ed4848309404382b6c4fcb153684, type: 3}
+  label: Screwdriver
+  value: 1
