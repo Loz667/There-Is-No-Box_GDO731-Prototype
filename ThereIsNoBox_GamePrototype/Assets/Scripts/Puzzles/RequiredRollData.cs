@@ -4,7 +4,7 @@ using UnityEngine;
 [Serializable]
 public class RequiredRollData
 {
-   public DiceEnums.RollType rollType;
+   public RollType rollType;
    public int amt = 1;
 
 }

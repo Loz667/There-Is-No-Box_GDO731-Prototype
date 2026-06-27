@@ -16,19 +16,19 @@ MonoBehaviour:
   description: 
   tasks:
   - requiredGlyphs:
-    - rollType: 9
+    - rollType: {fileID: 11400000, guid: f06cb43be447cfd4bbbd7dde9086f1d4, type: 2}
       amt: 4
-    - rollType: 9
+    - rollType: {fileID: 11400000, guid: f06cb43be447cfd4bbbd7dde9086f1d4, type: 2}
       amt: 4
   - requiredGlyphs:
-    - rollType: 0
+    - rollType: {fileID: 11400000, guid: 7e019419f72b53e49ac56abe15b980bd, type: 2}
       amt: 1
-    - rollType: 1
+    - rollType: {fileID: 11400000, guid: 1424e1f5a4161c84d8dd092e98530b43, type: 2}
       amt: 1
   - requiredGlyphs:
-    - rollType: 0
+    - rollType: {fileID: 11400000, guid: 7e019419f72b53e49ac56abe15b980bd, type: 2}
       amt: 1
-    - rollType: 0
+    - rollType: {fileID: 11400000, guid: 7e019419f72b53e49ac56abe15b980bd, type: 2}
       amt: 1
   rewards: []
   failures: []
