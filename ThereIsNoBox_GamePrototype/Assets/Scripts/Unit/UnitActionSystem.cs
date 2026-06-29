@@ -47,6 +47,8 @@ public class UnitActionSystem : MonoBehaviour
     {
         if (isBusy) return;
 
+        if (!TurnSystem.Instance.IsPlayerTurn()) return;
+
         if (EventSystem.current.IsPointerOverGameObject()) return;
 
         if (TryHandleUnitSelection()) return;
@@ -60,16 +62,14 @@ public class UnitActionSystem : MonoBehaviour
         {
             GridPosition mouseGridPosition = LevelGrid.Instance.GetGridPosition(MouseWorldPosition.GetCurrentPosition());
 
-            if (selectedAction.IsValidGridPositionForAction(mouseGridPosition))
-            {
-                if (currentSelected.TryUsePointsToTakeAction(selectedAction))
-                {
-                    SetBusy();
-                    selectedAction.TakeAction(mouseGridPosition, ClearBusy);
+            if (!selectedAction.IsValidGridPositionForAction(mouseGridPosition)) return;
 
-                    OnActionStarted?.Invoke(this, EventArgs.Empty);
-                }
-            }
+            if (!currentSelected.TryUsePointsToTakeAction(selectedAction)) return;
+
+            SetBusy();
+            selectedAction.TakeAction(mouseGridPosition, ClearBusy);
+
+            OnActionStarted?.Invoke(this, EventArgs.Empty);
         }
     }
 
@@ -98,6 +98,9 @@ public class UnitActionSystem : MonoBehaviour
                 {
                     //Unit is already selected so do not select again
                     if (unit == currentSelected) return false;
+
+                    //Clicked on enemy unit
+                    if (unit.IsEnemy()) return false;
 
                     SetSelectedUnit(unit);
                     return true;

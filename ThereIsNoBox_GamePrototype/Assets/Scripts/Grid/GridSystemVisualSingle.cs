@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class GridSystemVisualSingle : MonoBehaviour
 {
-    [SerializeField] MeshRenderer mesh;
+    [SerializeField] MeshRenderer meshRend;
 
-    public void Show()
+    public void Show(Material material)
     {
-        mesh.enabled = true;
+        meshRend.enabled = true;
+        meshRend.material = material;
     }
 
     public void Hide()
     {
-        mesh.enabled = false;
+        meshRend.enabled = false;
     }
 }

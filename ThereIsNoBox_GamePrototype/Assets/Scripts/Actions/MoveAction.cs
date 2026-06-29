@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class MoveAction : BaseAction
 {
-    [SerializeField] Animator unitAnimator;
+    public event EventHandler OnStartMoving;
+    public event EventHandler OnStopMoving;
+
     [SerializeField] int maxMoveDistance = 5;
 
     Vector3 targetPosition;
-
-    const string MOVE_ANIM = "IsMoving";
 
     protected override void Awake()
     {
@@ -28,14 +28,12 @@ public class MoveAction : BaseAction
         {
             float moveSpeed = 4f;
             transform.position += moveDirection * moveSpeed * Time.deltaTime;
-
-            unitAnimator.SetBool(MOVE_ANIM, true);
         }
         else
         {
-            unitAnimator.SetBool(MOVE_ANIM, false);
-            isActive = false;
-            onActionComplete();
+            OnStopMoving?.Invoke(this, EventArgs.Empty);
+
+            ActionCompleted();
         }
 
         float rotateSpeed = 10f;
@@ -49,9 +47,11 @@ public class MoveAction : BaseAction
 
     public override void TakeAction(GridPosition gridPosition, Action onActionComplete)
     {
-        this.onActionComplete = onActionComplete;
         this.targetPosition = LevelGrid.Instance.GetWorldPosition(gridPosition);
-        isActive = true;
+
+        OnStartMoving?.Invoke(this, EventArgs.Empty);
+
+        ActionStarted(onActionComplete);
     }
 
     public override List<GridPosition> GetValidGridPositionList()
@@ -81,5 +81,16 @@ public class MoveAction : BaseAction
         }
 
         return validGridPositionList;
+    }
+
+    public override EnemyAIAction GetEnemyAIAction(GridPosition gridPosition)
+    {
+        int targetCountAtPosition = unit.GetShootAction().GetTargetCountAtGridPosition(gridPosition);
+
+        return new EnemyAIAction
+        {
+            gridPosition = gridPosition,
+            actionValue = targetCountAtPosition * 10
+        };
     }
 }

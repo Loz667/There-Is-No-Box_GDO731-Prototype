@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 993826686c3438b48924e1c9b76e29e7, type: 2}
+  - {fileID: 2100000, guid: 6e4aa6383633bb241ad5073dca69b21e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -135,4 +135,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 369961a401ee85a4195953a17f66ce3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GridSystemVisualSingle
-  mesh: {fileID: 2020986399441114457}
+  meshRend: {fileID: 2020986399441114457}
