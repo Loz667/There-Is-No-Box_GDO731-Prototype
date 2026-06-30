@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "DieFace_", menuName = "Puzzle Dice/Add Face", order = 0)]
+[CreateAssetMenu(fileName = "DieFace_", menuName = "Back In Your Box/Puzzle Dice/Add Face", order = 0)]
 public class DieFace : ScriptableObject
 {
     public DiceEnums.RollType rollType;

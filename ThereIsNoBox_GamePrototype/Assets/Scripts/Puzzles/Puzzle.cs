@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Puzzle", menuName = "Puzzle/Dice Pool")]
+[CreateAssetMenu(fileName = "Puzzle", menuName = "Back In Your Box/Puzzle/Dice Pool")]
 public class Puzzle: ScriptableObject
 {
 

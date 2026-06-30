@@ -1,2 +1,3 @@
 /ThereIsNoBox_GamePrototype/.idea
-/ThereIsNoBox_GamePrototype/Assets/ThirdParty
+/ThereIsNoBox_GamePrototype/Assets/ThirdParty/*
+/ThereIsNoBox_GamePrototype/Assets/ThirdParty/Synty
