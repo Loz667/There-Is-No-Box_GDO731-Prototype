@@ -6,6 +6,7 @@ public class RoomManager : MonoBehaviour
     
     [SerializeField] private CinemachineCamera roomCamera;
     [SerializeField] private Transform cameraTarget;
+    [SerializeField] private Transform characterSpawn;
     
     
     void Start()
@@ -22,4 +23,8 @@ public class RoomManager : MonoBehaviour
         }
     }
     
+    public Vector3 GetSpawnLocation()
+    {
+        return characterSpawn.position;
+    }
 }

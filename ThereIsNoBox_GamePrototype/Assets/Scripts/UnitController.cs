@@ -2,11 +2,14 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using UnityEngine.AI;
 
 public class UnitController : MonoBehaviour
 {
     public static InputControls Controls;
     [SerializeField] float raycastRadius = 1f;
+
+    [SerializeField] NavMeshAgent agent;
     
     void Awake()
     {
@@ -40,8 +43,9 @@ public class UnitController : MonoBehaviour
 
         
         if (InteractWithObject()) return;
-        
 
+        //MoveToCursor();
+        UpdateAnimator();
         //HandleInteraction(); //TODO rename to something SELECT ?
 
     }
@@ -94,6 +98,27 @@ public class UnitController : MonoBehaviour
         }
 
         return false;
+    }
+
+    private void MoveToCursor()
+    {
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            Ray ray = GetMouseRay();
+            if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity))
+            {
+                // Move the player to the hit point
+                agent.SetDestination(hit.point);
+            }
+        }
+    }
+
+    private void UpdateAnimator()
+    {
+        Vector3 velocity = agent.velocity;
+        Vector3 localVelocity = transform.InverseTransformDirection(velocity);
+        float speed = Mathf.Abs(localVelocity.z);
+        agent.GetComponentInChildren<Animator>().SetFloat("zSpeed", speed);
     }
     
     RaycastHit[] RaycastAllSorted()
