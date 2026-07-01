@@ -1,0 +1,35 @@
+using System;
+using UnityEngine;
+    public class UIController: MonoBehaviour
+    {
+
+        public PuzzleView puzzleView;
+        public MapView mapView;
+        
+        
+        void OnEnable() => SubscribeEvents();
+        void OnDisable() => UnsubscribeEvents();
+
+        public void TogglePuzzleView()
+        {
+            puzzleView.ToggleView();
+        }
+
+        public void ToggleMapView()
+        {
+            mapView.ToggleView();
+        }
+
+       
+
+
+        private void SubscribeEvents()
+        {
+            //EventBroker<SelectUnitEvent>.OnEvent += UnitSelectedListener;
+        }
+
+        private void UnsubscribeEvents()
+        {
+            //EventBroker<SelectUnitEvent>.OnEvent -= UnitSelectedListener;
+        }
+    }
