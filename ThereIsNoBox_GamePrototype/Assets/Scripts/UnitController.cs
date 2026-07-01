@@ -1,40 +1,11 @@
-using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using UnityEngine.AI;
 
 public class UnitController : MonoBehaviour
 {
-    public static InputControls Controls;
-    [SerializeField] float raycastRadius = 1f;
-
-    [SerializeField] NavMeshAgent agent;
     
-    void Awake()
-    {
-        if (Controls != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Controls = new InputControls();
-        DontDestroyOnLoad(gameObject);
-    }
-    private void OnEnable() => Controls.Enable(); 
-
-    private void OnDisable() => Controls.Disable();
-        
-    private void OnDestroy()
-    {
-        if (Controls != null)
-        {
-            Controls.Dispose();
-            Controls = null;
-        }
-    }
-
+    [SerializeField] NavMeshAgent agent;
 
     void Update()
     {
@@ -52,9 +23,10 @@ public class UnitController : MonoBehaviour
     
     private void HandleTestInput()
     {
-        if (Controls.Player.Test.triggered)
+        if (InputHandler.Controls.Player.Test.triggered)
         {
             Debug.Log("Test key pressed");
+            Game.UI.TogglePuzzleView();
         }
         
         //if (InputHandler.Controls.Player.Target.triggered)
@@ -80,14 +52,13 @@ public class UnitController : MonoBehaviour
         
     private bool InteractWithObject()
     {
-        if (Controls.Player.Interact.triggered)
+        if (InputHandler.Controls.Player.Interact.triggered)
         {
            Debug.Log("Interact triggered");
-            Ray ray = GetMouseRay();
+            Ray ray = InputHandler.GetMouseRay();
             if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity))
             {
                 Debug.Log("Got a hit");
-                // 2. Check if whatever we clicked has an IRaycastable component
                 IRaycastable raycastable = hit.transform.GetComponent<IRaycastable>();
                 if (raycastable != null)
                 {
@@ -102,9 +73,10 @@ public class UnitController : MonoBehaviour
 
     private void MoveToCursor()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        //if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (InputHandler.Controls.Player.Interact.triggered)
         {
-            Ray ray = GetMouseRay();
+            Ray ray = InputHandler.GetMouseRay();
             if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity))
             {
                 // Move the player to the hit point
@@ -120,20 +92,5 @@ public class UnitController : MonoBehaviour
         float speed = Mathf.Abs(localVelocity.z);
         agent.GetComponentInChildren<Animator>().SetFloat("zSpeed", speed);
     }
-    
-    RaycastHit[] RaycastAllSorted()
-    {
-        RaycastHit[] hits = Physics.SphereCastAll(GetMouseRay(), raycastRadius);
-        float[] distances = new float[hits.Length];
-        for (int i = 0; i < hits.Length; i++)
-        {
-            distances[i] = hits[i].distance;
-        }
-        Array.Sort(distances, hits);
-        return hits;
-    }
-    
-    public static Ray GetMouseRay() => Camera.main.ScreenPointToRay(MousePosition());
-    public static Vector3 MousePosition() => Mouse.current.position.ReadValue();
     
 }
