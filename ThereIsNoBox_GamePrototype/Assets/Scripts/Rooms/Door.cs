@@ -18,7 +18,6 @@ public class Door : MonoBehaviour, IRaycastable
     private async void DoRoomTransition()
     {
         await ScreenFader.Instance.FadeOut();
-        GameManager.instance.currentNode = null;
         originRoom.SetActiveRoomCamera(false);
         SpawnCharacterInRoom();
         targetRoom.SetActiveRoomCamera(true);

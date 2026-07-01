@@ -1,34 +1,32 @@
 using UnityEngine;
 
-public class GridSystem
+public class FacilityGridSystem
 {
     int width;
     int height;
     float cellSize;
-    
-    GridObject[,] gridObjectArray;
 
-    public GridSystem(int width, int height, float cellSize)
+    FacilityGridObject[,] gridObjectArray;
+
+    public FacilityGridSystem(int width, int height, float cellSize)
     {
         this.width = width;
         this.height = height;
         this.cellSize = cellSize;
-
-        gridObjectArray = new GridObject[width, height];
-
+        gridObjectArray = new FacilityGridObject[width, height];
         for (int x = 0; x < width; x++)
         {
             for (int z = 0; z < height; z++)
             {
                 GridPosition gridPosition = new GridPosition(x, z);
-                gridObjectArray[x,z] = new GridObject(this, gridPosition);
+                gridObjectArray[x, z] = new FacilityGridObject(this, gridPosition);
             }
         }
     }
 
     public Vector3 GetWorldPosition(GridPosition gridPosition)
     {
-        return new Vector3 (gridPosition.x, 0, gridPosition.z) * cellSize;
+        return new Vector3(gridPosition.x, 0, gridPosition.z) * cellSize;
     }
 
     public GridPosition GetGridPosition(Vector3 worldPosition)
@@ -36,7 +34,12 @@ public class GridSystem
         return new GridPosition(
             Mathf.RoundToInt(worldPosition.x / cellSize),
             Mathf.RoundToInt(worldPosition.z / cellSize)
-            );
+        );
+    }
+
+    public FacilityGridObject GetFacilityGridObject(GridPosition gridPosition)
+    {
+        return gridObjectArray[gridPosition.x, gridPosition.z];
     }
 
     public void CreateDebugObjects(Transform debugPrefab)
@@ -49,14 +52,9 @@ public class GridSystem
 
                 Transform debugTransform = GameObject.Instantiate(debugPrefab, GetWorldPosition(gridPosition), Quaternion.identity);
                 DebugGridObject debugGrid = debugTransform.GetComponent<DebugGridObject>();
-                //debugGrid.SetGridObject(GetGridObject(gridPosition));
+                debugGrid.SetGridObject(GetFacilityGridObject(gridPosition));
             }
         }
-    }
-
-    public GridObject GetGridObject(GridPosition gridPosition)
-    {
-        return gridObjectArray[gridPosition.x, gridPosition.z];
     }
 
     public bool IsValidGridPosition(GridPosition gridPosition)
