@@ -4,9 +4,9 @@ using TMPro;
 public class DebugGridObject : MonoBehaviour
 {
     [SerializeField] TextMeshPro debugText;
-    GridObject gridObject;
+    FacilityGridObject gridObject;
 
-    public void SetGridObject(GridObject gridObject)
+    public void SetGridObject(FacilityGridObject gridObject)
     {
         this.gridObject = gridObject;
     }
