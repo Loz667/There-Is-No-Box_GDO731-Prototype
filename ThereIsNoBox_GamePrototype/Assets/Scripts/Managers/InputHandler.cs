@@ -1,12 +1,15 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+
 
 
     public class InputHandler : MonoBehaviour
     {
 
         public static InputControls Controls;
+        static float raycastRadius = 1f;
 
         void Awake()
         {
@@ -34,6 +37,18 @@ using UnityEngine.EventSystems;
 
         public static Ray GetMouseRay() => Camera.main.ScreenPointToRay(MousePosition());
         public static Vector3 MousePosition() => Mouse.current.position.ReadValue();
+        
+        public static RaycastHit[] RaycastAllSorted()
+        {
+            RaycastHit[] hits = Physics.SphereCastAll(InputHandler.GetMouseRay(), raycastRadius);
+            float[] distances = new float[hits.Length];
+            for (int i = 0; i < hits.Length; i++)
+            {
+                distances[i] = hits[i].distance;
+            }
+            Array.Sort(distances, hits);
+            return hits;
+        }
         
         /*
         public static Vector3 GetMouseWorldPosition() 
