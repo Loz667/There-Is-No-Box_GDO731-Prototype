@@ -42,11 +42,38 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639185464494583529
+  lastModified: 639186084851696499
   FileSizes:
   - Name: Desktop
-    Value: 4769568
+    Value: 5782208
   Exists: 1
+--- !u!114 &-2621721903416763885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/HumptyDumpty
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/HumptyDumpty
+  Guid:
+    Data1: 473410638
+    Data2: 1194546756
+    Data3: -1806066256
+    Data4: -414448190
+  Banks:
+  - {fileID: -7412621264688685989}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12750
 --- !u!114 &-2195706544041026217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,7 +89,7 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639185437886813565
+  lastModified: 639185480782521829
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -88,13 +115,14 @@ MonoBehaviour:
   - {fileID: 7218704342396561068}
   - {fileID: 2231599798654007308}
   - {fileID: -8422048404320932751}
+  - {fileID: -2621721903416763885}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2195706544041026217}
   StringsBanks:
   - {fileID: 954684395828135459}
   cacheVersion: 131860
-  cacheTime: 639185464494583529
+  cacheTime: 639186084851696499
   SerializableEventsDict:
   - key: event:/Ambient/Ambient-AirConditioner
     index: 0
@@ -104,6 +132,8 @@ MonoBehaviour:
     index: 2
   - key: event:/SFX/SFX-ElevatorDing
     index: 3
+  - key: event:/SFX/HumptyDumpty
+    index: 4
 --- !u!114 &954684395828135459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,10 +149,10 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639185437886833492
+  lastModified: 639185480790323531
   FileSizes:
   - Name: Desktop
-    Value: 1000
+    Value: 1056
   Exists: 1
 --- !u!114 &2231599798654007308
 MonoBehaviour:
