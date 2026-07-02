@@ -17,6 +17,8 @@ using UnityEngine;
 
         public void ToggleMapView()
         {
+            Debug.Log("ToggleMapView called");
+            Game.HUD.ToggleHUD(mapView.IsActive);
             mapView.ToggleView();
         }
 

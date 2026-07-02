@@ -16,7 +16,7 @@ public class UnitController : MonoBehaviour
         if (InteractWithObject()) return;
 
         //MoveToCursor();
-        UpdateAnimator();
+        //UpdateAnimator();
         //HandleInteraction(); //TODO rename to something SELECT ?
 
     }
@@ -26,7 +26,7 @@ public class UnitController : MonoBehaviour
         if (InputHandler.Controls.Player.Test.triggered)
         {
             Debug.Log("Test key pressed");
-            Game.UI.TogglePuzzleView();
+            Game.UI.ToggleMapView();
         }
         
         //if (InputHandler.Controls.Player.Target.triggered)
@@ -45,6 +45,11 @@ public class UnitController : MonoBehaviour
     
     private bool InteractWithUI()
     {
+        if (InputHandler.Controls.Player.Map.triggered)
+        {
+            Game.UI.ToggleMapView();
+        }
+
         if (EventSystem.current.IsPointerOverGameObject()) return true;
         return false;
     }

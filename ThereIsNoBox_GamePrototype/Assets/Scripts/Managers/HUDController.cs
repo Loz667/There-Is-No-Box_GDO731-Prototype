@@ -10,7 +10,8 @@ public class HUDController: MonoBehaviour
 
     public void ToggleHUD(bool state)
     {
-        base.gameObject.SetActive(state);
+        
+        HUD.SetActive(state);
     }
     
 }
