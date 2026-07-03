@@ -15,7 +15,7 @@ public class UnitController : MonoBehaviour
         
         if (InteractWithObject()) return;
 
-        //MoveToCursor();
+        MoveToCursor();
         //UpdateAnimator();
         //HandleInteraction(); //TODO rename to something SELECT ?
 
@@ -26,7 +26,7 @@ public class UnitController : MonoBehaviour
         if (InputHandler.Controls.Player.Test.triggered)
         {
             Debug.Log("Test key pressed");
-            Game.UI.ToggleMapView();
+            Game.UI.TogglePuzzleView();
         }
         
         //if (InputHandler.Controls.Player.Target.triggered)

@@ -27,7 +27,7 @@ public class Interactable : MonoBehaviour, IRaycastable, IPointerEnterHandler, I
     public void HandleRaycast()
     {
         Debug.Log("Clicked on object: " + this.gameObject.name);
-        
+        Game.UI.TogglePuzzleView();
     }
     
     public void Highlight(bool enable)

@@ -5,12 +5,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9b36042-ff5a-43f5-a8c3-bfba2d43307f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Rooms/RoomDef.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Rooms/RoomDef.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ThereIsNoBox_GamePrototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThereIsNoBox_GamePrototype/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/UIBlur.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/UIBlur.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/FX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/FX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Brick.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Brick.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Brick.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Brick.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Carpet.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Carpet.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Carpet.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Carpet.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Cloud.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Cloud.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Cloud.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Cloud.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Concrete.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Concrete.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Concrete.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Concrete.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Dirt.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Dirt.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Dirt.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Dirt.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Glass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Glass.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Glass.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Glass_Opaque.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Glass_Opaque.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Glass_Opaque.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Glass_Opaque.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Grass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Grass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Grass.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Grass.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Ivy.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Ivy.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Ivy.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Ivy.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Mountains.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Mountains.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Mountains.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Mountains.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Overview_Map_Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Overview_Map_Ground.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Overview_Map_Ground.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Overview_Map_Ground.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Plaster.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Plaster.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Plaster.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Plaster.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Road.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Road.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Road.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Road.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Rock.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Rock.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Rock.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Rock.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_SimpleSky.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_SimpleSky.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_SimpleSky.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_SimpleSky.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Skyline.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Skyline.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Skyline.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Skyline.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Triplanar_Grass_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Triplanar_Grass_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Triplanar_Grass_01.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Triplanar_Grass_01.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Water.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Water.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Water.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Water_Fade.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Water_Fade.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Water_Fade.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Water_Fade.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Wood.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Wood.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Wood.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Generic_Wood.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Glass_Opaque_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Glass_Opaque_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Glass_Opaque_01.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Glass_Opaque_01.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Skybox_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Skybox_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Skybox_01.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Skybox_01.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Waterflow_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Waterflow_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Waterflow_01.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Materials/Waterflow_01.mat.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Models.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Models.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Models/Base.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Models/Base.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Prefabs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Prefabs/Base.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Prefabs/Base.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Prefabs/FX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Prefabs/FX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Prefabs/Props.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Prefabs/Props.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Textures.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Textures.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Textures/FX.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/PolygonGeneric/Textures/FX.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/SyntyPackageHelper/Editor/ShaderGraph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/SyntyPackageHelper/Editor/ShaderGraph.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rooms/Room.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rooms/Room.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rooms/RoomSide.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rooms/RoomSide.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Components/ContainmentTrack.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Components/ContainmentTrack.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/RoomCameraTest_TH.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/RoomCameraTest_TH.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/HUDController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/HUDController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MapView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MapView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/RoomScale.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/RoomScale.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rooms/Interactable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rooms/Interactable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnitController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +85,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rooms/RoomDef.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerMap.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -38,7 +102,7 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;BasicHUD&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;LinkingUnitsToUI&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -114,6 +178,8 @@
       <workItem from="1782426504130" duration="640000" />
       <workItem from="1782739222424" duration="5651000" />
       <workItem from="1782982431466" duration="4529000" />
+      <workItem from="1783007515872" duration="2868000" />
+      <workItem from="1783068420521" duration="609000" />
     </task>
     <servers />
   </component>
