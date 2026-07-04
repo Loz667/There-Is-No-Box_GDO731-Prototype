@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class DiceRollManager : MonoBehaviour
 {
-    
     public static DiceRollManager Instance { get; private set; }
     
     public DieDefinition standardDie;
@@ -61,11 +60,9 @@ public class DiceRollManager : MonoBehaviour
             Debug.Log("No dice left to roll!");
             return;
         }
-
-        // Roll each active die in the pool
+        
         foreach (DieController die in activeDice)
         {
-            // NOTE: Change 'faces' to whatever you named the array in your DieDefinition SO!
             int randomIndex = Random.Range(0, standardDie.Faces.Length);
             DieFace rolledFace = standardDie.Faces[randomIndex];
             

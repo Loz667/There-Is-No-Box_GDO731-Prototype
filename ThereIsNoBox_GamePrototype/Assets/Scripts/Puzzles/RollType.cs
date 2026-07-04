@@ -4,5 +4,6 @@ using UnityEngine;
 public class RollType : ScriptableObject
 {
     public DiceEnums.RollType rollType;
-    public Sprite icon;
+    public Sprite rollIcon;
+    public Sprite targetIcon;
 }
