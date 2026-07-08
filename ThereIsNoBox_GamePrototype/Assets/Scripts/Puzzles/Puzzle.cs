@@ -12,6 +12,8 @@ public class Puzzle: ScriptableObject
 
     public List<string> rewards =  new List<string>();
     public List<string> failures = new List<string>();
+
+    public List<DieDefinition> allowedDice = new List<DieDefinition>();
     
     public bool isActive { get; private set; }
     

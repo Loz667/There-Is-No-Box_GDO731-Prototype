@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DieController : MonoBehaviour
+public class DieUI : MonoBehaviour
 {
     public GameObject currentDie;
     

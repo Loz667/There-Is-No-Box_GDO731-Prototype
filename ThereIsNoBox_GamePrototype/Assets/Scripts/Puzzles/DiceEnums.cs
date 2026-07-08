@@ -4,6 +4,8 @@ public class DiceEnums
 {
     public enum DieResult
     {
+        EMPTY,
+        BLANK,
         SCREW1,
         SCREW2,
         SCREW3,
@@ -27,6 +29,7 @@ public class DiceEnums
 
     public enum RollType
     {
+        NONE,
         SCREW,
         SPANNER,
         HAMMER,
@@ -48,10 +51,14 @@ public class DiceEnums
 
     public enum DieState
     {
+        Available,
+        Added,
         Rolling,
-        Locked,
+        Focused,
+        Lost,
         Used,
-        Lost
+        Locked,
+        Discarded 
     }
     
 }

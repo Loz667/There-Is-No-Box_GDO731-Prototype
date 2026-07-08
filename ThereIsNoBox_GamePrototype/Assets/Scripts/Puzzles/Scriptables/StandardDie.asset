@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: StandardDie
   m_EditorClassIdentifier: Assembly-CSharp::DieDefinition
   faces:
+  - {fileID: 11400000, guid: 220119f323cc9334faaa1a85963d756d, type: 2}
+  - {fileID: 11400000, guid: bdab0be67193f074bac033b947eaf801, type: 2}
   - {fileID: 11400000, guid: e5ba79ad8752d28459f546b57b73ba1b, type: 2}
   - {fileID: 11400000, guid: 35f97c29f847958498f223cf535527e8, type: 2}
   - {fileID: 11400000, guid: 87738a5617223f84eb885278925396e7, type: 2}
   - {fileID: 11400000, guid: 9b90058d5112ae74cb062859b7c38997, type: 2}
-  - {fileID: 11400000, guid: d6d0b3907272e604ea32a1184ab154a2, type: 2}
-  - {fileID: 11400000, guid: 288bcdd35b6ad7b4082a51576a0adb7a, type: 2}
+  dieColor: {r: 0.21176471, g: 0.3137255, b: 0.5294118, a: 0}

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4014c49b65401cb4c919a3a3332444ce, type: 3}
   m_Name: DieFace_Screw
   m_EditorClassIdentifier: Assembly-CSharp::DieFace
-  resultType: 0
+  rollType: 1
+  rollResult: 2
   image: {fileID: 21300000, guid: 4620ed4848309404382b6c4fcb153684, type: 3}
   label: Screwdriver
   value: 1

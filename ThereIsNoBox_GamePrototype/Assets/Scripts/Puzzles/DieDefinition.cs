@@ -4,13 +4,16 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PuzzleDie", menuName = "Puzzle Dice/Add Die", order = 1)]
 public class DieDefinition : ScriptableObject, IRollable<DieFace>
 {
-    [SerializeField] private DieFace[] faces;
-    public DieFace[] Faces => faces;
+    //Type?
+    public List<DieFace> faces = new List<DieFace>();
+    public Color dieColor;
 
     public DieFace GetRoll()
     {
-        return faces[Random.Range(0, faces.Length)];
+        if (faces == null || faces.Count == 0) return null;
+        int index = Random.Range(0, faces.Count);
+        Debug.Log("DieDef.GetRoll " + index);
+        return faces[index];
     }
-    
     
 }

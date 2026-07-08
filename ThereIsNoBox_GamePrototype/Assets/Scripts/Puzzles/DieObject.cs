@@ -25,7 +25,7 @@ public class DieObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         Debug.Log("Beginning OnBeginDrag");
         //if (!isInteractable) return; 
         source = transform.parent;
-        transform.SetParent(transform.root); //Canvas?
+        transform.SetParent(transform.root); //Canvas object
         canvasGroup.blocksRaycasts = false;
         canvasGroup.alpha = 0.6f;
         

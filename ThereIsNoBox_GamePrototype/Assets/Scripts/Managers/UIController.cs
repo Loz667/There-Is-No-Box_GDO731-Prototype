@@ -3,7 +3,7 @@ using UnityEngine;
     public class UIController: MonoBehaviour
     {
 
-        public PuzzleView puzzleView;
+        public PuzzleUI puzzleUI;
         public MapView mapView;
         
         
@@ -12,7 +12,7 @@ using UnityEngine;
 
         public void TogglePuzzleView()
         {
-            puzzleView.ToggleView();
+            puzzleUI.ToggleView();
         }
 
         public void ToggleMapView()

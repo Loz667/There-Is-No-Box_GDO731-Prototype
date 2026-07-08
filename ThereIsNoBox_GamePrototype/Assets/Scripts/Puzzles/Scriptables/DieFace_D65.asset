@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4014c49b65401cb4c919a3a3332444ce, type: 3}
   m_Name: DieFace_D65
   m_EditorClassIdentifier: Assembly-CSharp::DieFace
-  rollType: 9
-  resultType: 15
+  rollType: 10
+  rollResult: 17
   image: {fileID: -1745399401, guid: 4492ba20a6e3024429686a6f5974827d, type: 3}
   label: Five
   value: 5
