@@ -7,8 +7,7 @@ using UnityEngine.AI;
 public class Door : MonoBehaviour, IRaycastable
 {
     public RoomManager originRoom;
-    public RoomManager targetRoom;
-    [SerializeField] NavMeshAgent player;
+    public RoomManager targetRoom;    
 
     public void HandleRaycast()
     {
@@ -27,6 +26,8 @@ public class Door : MonoBehaviour, IRaycastable
 
     void SpawnCharacterInRoom()
     {
+        NavMeshAgent player = UnitActionSystem.Instance.GetSelectedUnit().GetComponent<NavMeshAgent>();
+
         player.enabled = false;
         player.transform.position = targetRoom.GetSpawnLocation();
         player.enabled = true;

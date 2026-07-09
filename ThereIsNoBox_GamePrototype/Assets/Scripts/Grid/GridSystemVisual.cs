@@ -60,23 +60,23 @@ public class GridSystemVisual : MonoBehaviour
 
         GridVisualColour gridVisualColour;
 
-        switch (selectedAction)
-        {
-            default:
-            case MoveAction moveAction:
-                gridVisualColour = GridVisualColour.White;
-                break;
-            case SpinAction spinAction:
-                gridVisualColour = GridVisualColour.Blue;
-                break;
-            case ShootAction shootAction:
-                gridVisualColour = GridVisualColour.DarkRed;
+        //switch (selectedAction)
+        //{
+        //    default:
+        //    case MoveAction moveAction:
+        //        gridVisualColour = GridVisualColour.White;
+        //        break;
+        //    case SpinAction spinAction:
+        //        gridVisualColour = GridVisualColour.Blue;
+        //        break;
+        //    case ShootAction shootAction:
+        //        gridVisualColour = GridVisualColour.DarkRed;
 
-                ShowAvailableRange(selectedUnit.GetGridPosition(), shootAction.GetShootRange(), GridVisualColour.LightRed);
-                break;
-        }
+        //        ShowAvailableRange(selectedUnit.GetGridPosition(), shootAction.GetShootRange(), GridVisualColour.LightRed);
+        //        break;
+        //}
 
-        ShowOnlyAvailable(selectedAction.GetValidGridPositionList(), gridVisualColour);
+        //ShowOnlyAvailable(selectedAction.GetValidGridPositionList(), gridVisualColour);
     }
 
     public void HideAll()

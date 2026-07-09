@@ -4,9 +4,6 @@ using UnityEngine.AI;
 
 public class UnitController : MonoBehaviour
 {
-    
-    [SerializeField] NavMeshAgent agent;
-
     void Update()
     {
         HandleTestInput();
@@ -57,9 +54,10 @@ public class UnitController : MonoBehaviour
         
     private bool InteractWithObject()
     {
+
         if (InputHandler.Controls.Player.Interact.triggered)
         {
-           Debug.Log("Interact triggered");
+            Debug.Log("Interact triggered");
             Ray ray = InputHandler.GetMouseRay();
             if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity))
             {
@@ -78,24 +76,24 @@ public class UnitController : MonoBehaviour
 
     private void MoveToCursor()
     {
-        //if (Mouse.current.leftButton.wasPressedThisFrame)
         if (InputHandler.Controls.Player.Interact.triggered)
         {
             Ray ray = InputHandler.GetMouseRay();
             if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity))
             {
                 // Move the player to the hit point
+                NavMeshAgent agent = UnitActionSystem.Instance.GetSelectedUnit().GetComponent<NavMeshAgent>();
                 agent.SetDestination(hit.point);
             }
         }
     }
 
-    private void UpdateAnimator()
-    {
-        Vector3 velocity = agent.velocity;
-        Vector3 localVelocity = transform.InverseTransformDirection(velocity);
-        float speed = Mathf.Abs(localVelocity.z);
-        agent.GetComponentInChildren<Animator>().SetFloat("zSpeed", speed);
-    }
-    
+    //private void UpdateAnimator()
+    //{
+    //    Vector3 velocity = agent.velocity;
+    //    Vector3 localVelocity = transform.InverseTransformDirection(velocity);
+    //    float speed = Mathf.Abs(localVelocity.z);
+    //    agent.GetComponentInChildren<Animator>().SetFloat("zSpeed", speed);
+    //}
+
 }

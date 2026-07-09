@@ -1,12 +1,12 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-public class DebugGridObject : MonoBehaviour
+public class FacilityDebugGrid : MonoBehaviour
 {
     [SerializeField] TextMeshPro debugText;
-    GridObject gridObject;
+    FacilityGridObject gridObject;
 
-    public void SetGridObject(GridObject gridObject)
+    public void SetGridObject(FacilityGridObject gridObject)
     {
         this.gridObject = gridObject;
     }

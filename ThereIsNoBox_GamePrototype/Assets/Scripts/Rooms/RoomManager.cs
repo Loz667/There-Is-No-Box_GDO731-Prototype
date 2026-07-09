@@ -9,7 +9,7 @@ public class RoomManager : MonoBehaviour
     [SerializeField] private Transform characterSpawn;
 
     GridPosition roomPosition;
-    List<Prop> props = new List<Prop>();
+    List<Interactable> interactableObjects = new List<Interactable>();
 
     void Start()
     {
@@ -18,8 +18,7 @@ public class RoomManager : MonoBehaviour
 
         if (roomCamera != null && cameraTarget != null) roomCamera.Follow = cameraTarget;
 
-        AddChildProps(transform);
-        Debug.Log($"RoomManager: {gameObject.name} has {props.Count} props.");
+        CreateInteractableObjectsList(transform);
     }
 
     public void SetActiveRoomCamera(bool isActive)
@@ -35,16 +34,16 @@ public class RoomManager : MonoBehaviour
         return characterSpawn.position;
     }
 
-    void AddChildProps(Transform parent)
+    void CreateInteractableObjectsList(Transform parent)
     {
         foreach (Transform child in parent)
         {
-            Prop prop = child.GetComponent<Prop>();
-            if (prop != null)
+            Interactable obj = child.GetComponent<Interactable>();
+            if (obj != null)
             {
-                props.Add(prop);
+                interactableObjects.Add(obj);
             }
-            AddChildProps(child);
+            CreateInteractableObjectsList(child);
         }
     }
 }
