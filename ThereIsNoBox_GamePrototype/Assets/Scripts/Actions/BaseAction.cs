@@ -18,15 +18,15 @@ public abstract class BaseAction : MonoBehaviour
 
     public abstract string GetActionName();
 
-    public abstract void TakeAction(GridPosition gridPosition, Action onActionComplete);
+    public abstract void TakeAction(Action onActionComplete);
 
-    public virtual bool IsValidGridPositionForAction(GridPosition gridPosition)
-    {
-        List<GridPosition> validGridPositionList = GetValidGridPositionList();
-        return validGridPositionList.Contains(gridPosition);
-    }
+    //public virtual bool IsValidGridPositionForAction(GridPosition gridPosition)
+    //{
+    //    List<GridPosition> validGridPositionList = GetValidGridPositionList();
+    //    return validGridPositionList.Contains(gridPosition);
+    //}
 
-    public abstract List<GridPosition> GetValidGridPositionList();
+    //public abstract List<GridPosition> GetValidGridPositionList();
 
     public virtual int GetActionPointsCost()
     {
@@ -38,31 +38,32 @@ public abstract class BaseAction : MonoBehaviour
         return unit;
     }
 
-    public EnemyAIAction GetBestEnemyAIAction()
-    {
-        List<EnemyAIAction> enemyAIActions = new List<EnemyAIAction>();
+    //public EnemyAIAction GetBestEnemyAIAction()
+    //{
+    //    List<EnemyAIAction> enemyAIActions = new List<EnemyAIAction>();
 
-        List<GridPosition> validGridPositions = GetValidGridPositionList();
+    //    //List<GridPosition> validGridPositions = GetValidGridPositionList();
 
-        foreach (GridPosition gridPosition in validGridPositions)
-        {
-            EnemyAIAction enemyAIAction = GetEnemyAIAction(gridPosition);
-            enemyAIActions.Add(enemyAIAction);
-        }
+    //    foreach (GridPosition gridPosition in validGridPositions)
+    //    {
+    //        EnemyAIAction enemyAIAction = GetEnemyAIAction(gridPosition);
+    //    }
 
-        if (enemyAIActions.Count > 0)
-        {
-            enemyAIActions.Sort((EnemyAIAction a, EnemyAIAction b) => b.actionValue - a.actionValue);
+    //    enemyAIActions.Add(enemyAIAction);
 
-            return enemyAIActions[0];
-        }
-        else
-        {
-            return null;
-        }
-    }
+    //    if (enemyAIActions.Count > 0)
+    //    {
+    //        enemyAIActions.Sort((EnemyAIAction a, EnemyAIAction b) => b.actionValue - a.actionValue);
 
-    public abstract EnemyAIAction GetEnemyAIAction(GridPosition gridPosition);
+    //        return enemyAIActions[0];
+    //    }
+    //    else
+    //    {
+    //        return null;
+    //    }
+    //}
+
+    //public abstract EnemyAIAction GetEnemyAIAction(GridPosition gridPosition);
 
     protected void ActionStarted(Action onActionComplete)
     {

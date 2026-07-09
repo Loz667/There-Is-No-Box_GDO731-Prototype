@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -16,9 +17,21 @@ public class UnitActionSystem : MonoBehaviour
         return currentSelected;
     }
 
+    public void GetNextActiveUnit()
+    {
+        int currentIndex = UnitManager.Instance.GetPlayerUnitsList().IndexOf(currentSelected);
+        int nextIndex = (currentIndex + 1) % UnitManager.Instance.GetPlayerUnitsList().Count;
+
+        currentSelected = UnitManager.Instance.GetPlayerUnitsList()[nextIndex];
+
+        room = FacilityGrid.Instance.GetRoomAtGridPosition(currentSelected.GetGridPosition());
+        DoCameraTransition(room);
+    }
+
     public void SetSelectedAction(BaseAction baseAction)
     {
         selectedAction = baseAction;
+
         OnSelectedActionChanged?.Invoke(this, EventArgs.Empty);
     }
 
@@ -32,6 +45,8 @@ public class UnitActionSystem : MonoBehaviour
 
     BaseAction selectedAction;
     bool isBusy;
+
+    RoomManager room;
 
     void Awake()
     {
@@ -53,24 +68,25 @@ public class UnitActionSystem : MonoBehaviour
 
         if (TryHandleUnitSelection()) return;
 
-        HandleSelectedAction();
+        //HandleSelectedAction();
     }
 
-    void HandleSelectedAction()
+    public void HandleSelectedAction()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            GridPosition mouseGridPosition = LevelGrid.Instance.GetGridPosition(MouseWorldPosition.GetCurrentPosition());
+        if (!currentSelected.TryUsePointsToTakeAction(selectedAction)) return;
 
-            if (!selectedAction.IsValidGridPositionForAction(mouseGridPosition)) return;
+        SetBusy();
 
-            if (!currentSelected.TryUsePointsToTakeAction(selectedAction)) return;
+        selectedAction.TakeAction(ClearBusy);
 
-            SetBusy();
-            selectedAction.TakeAction(mouseGridPosition, ClearBusy);
+        OnActionStarted?.Invoke(this, EventArgs.Empty);
 
-            OnActionStarted?.Invoke(this, EventArgs.Empty);
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    GridPosition mouseGridPosition = LevelGrid.Instance.GetGridPosition(MouseWorldPosition.GetCurrentPosition());
+
+        //    if (!selectedAction.IsValidGridPositionForAction(mouseGridPosition)) return;            
+        //}
     }
 
     void SetBusy()
@@ -113,8 +129,17 @@ public class UnitActionSystem : MonoBehaviour
     void SetSelectedUnit(Unit unit)
     {
         currentSelected = unit;
-        SetSelectedAction(unit.GetMoveAction());
+
+        SetSelectedAction(unit.GetBaseActions()[0]);
 
         OnSelectedUnitChanged?.Invoke(this, EventArgs.Empty);
+    }
+
+    async void DoCameraTransition(RoomManager targetRoom)
+    {
+        await ScreenFader.Instance.FadeOut();
+        targetRoom.SetActiveRoomCamera(true);
+        await Task.Delay(150);
+        await ScreenFader.Instance.FadeIn();
     }
 }

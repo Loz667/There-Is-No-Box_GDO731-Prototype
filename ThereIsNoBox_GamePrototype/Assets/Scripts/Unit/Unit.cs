@@ -10,11 +10,14 @@ public class Unit : MonoBehaviour
     public static event EventHandler OnAnyHealthPointsChanged;
     public static event EventHandler OnAnyMoralePointsChanged;
 
+    public bool HasTakenAction { get; private set; }
+
     public bool TryUsePointsToTakeAction(BaseAction baseAction)
     {
         if (CanUsePointsToTakeAction(baseAction))
         {
             UseActionPoints(baseAction.GetActionPointsCost());
+            HasTakenAction = true;
             return true;
         }
         else
@@ -43,20 +46,20 @@ public class Unit : MonoBehaviour
         return moraleSystem.GetMorale();
     }
 
-    public MoveAction GetMoveAction()
-    {
-        return moveAction;
-    }
+    //public MoveAction GetMoveAction()
+    //{
+    //    return moveAction;
+    //}
 
-    public SpinAction GetSpinAction()
-    {
-        return spinAction;
-    }
+    //public SpinAction GetSpinAction()
+    //{
+    //    return spinAction;
+    //}
 
-    public ShootAction GetShootAction()
-    {
-        return shootAction;
-    }
+    //public ShootAction GetShootAction()
+    //{
+    //    return shootAction;
+    //}
 
     public BaseAction[] GetBaseActions()
     {
@@ -121,9 +124,9 @@ public class Unit : MonoBehaviour
 
     GridPosition currentPosition;
 
-    MoveAction moveAction;
-    SpinAction spinAction;
-    ShootAction shootAction;
+    //MoveAction moveAction;
+    //SpinAction spinAction;
+    //ShootAction shootAction;
     BaseAction[] baseActions;
 
     int maxActionPoints;
@@ -133,16 +136,16 @@ public class Unit : MonoBehaviour
         healthSystem = GetComponent<HealthSystem>();
         moraleSystem = GetComponent<MoraleSystem>();
 
-        moveAction = GetComponent<MoveAction>();
-        spinAction = GetComponent<SpinAction>();
-        shootAction = GetComponent<ShootAction>();
+        //moveAction = GetComponent<MoveAction>();
+        //spinAction = GetComponent<SpinAction>();
+        //shootAction = GetComponent<ShootAction>();
         baseActions = GetComponents<BaseAction>();
     }
 
     void Start()
     {
-        currentPosition = LevelGrid.Instance.GetGridPosition(transform.position);
-        LevelGrid.Instance.AddUnitAtGridPosition(currentPosition, this);
+        currentPosition = FacilityGrid.Instance.GetGridPosition(transform.position);
+        FacilityGrid.Instance.AddUnitAtGridPosition(currentPosition, this);
 
         maxActionPoints = actionPoints;
 
@@ -156,13 +159,13 @@ public class Unit : MonoBehaviour
 
     void Update()
     {
-        GridPosition newPosition = LevelGrid.Instance.GetGridPosition(transform.position);
+        GridPosition newPosition = FacilityGrid.Instance.GetGridPosition(transform.position);
         if (newPosition != currentPosition)
         {
             GridPosition oldPosition = currentPosition;
             currentPosition = newPosition;
 
-            LevelGrid.Instance.UnitMovedGridPosition(this, oldPosition, newPosition);
+            FacilityGrid.Instance.UnitMovedGridPosition(this, oldPosition, newPosition);
         }
     }
 
@@ -180,13 +183,15 @@ public class Unit : MonoBehaviour
         {
             actionPoints = maxActionPoints;
 
+            HasTakenAction = false;
+
             OnAnyActionPointsChanged?.Invoke(this, EventArgs.Empty);
         }
     }
 
     void OnHealthDepleted(object sender, EventArgs e)
     {
-        LevelGrid.Instance.RemoveUnitAtGridPosition(currentPosition, this);
+        FacilityGrid.Instance.RemoveUnitAtGridPosition(currentPosition, this);
 
         Destroy(gameObject);
 
@@ -195,7 +200,7 @@ public class Unit : MonoBehaviour
 
     void OnMoraleDepleted(object sender, EventArgs e)
     {
-        LevelGrid.Instance.RemoveUnitAtGridPosition(currentPosition, this);
+        FacilityGrid.Instance.RemoveUnitAtGridPosition(currentPosition, this);
 
         Destroy(gameObject);
 

@@ -15,6 +15,19 @@ public class TurnSystem : MonoBehaviour
         Instance = this;
     }
 
+    public void EndTurn()
+    {
+        if (UnitActionSystem.Instance.GetSelectedUnit().HasTakenAction)
+        {
+            UnitActionSystem.Instance.GetNextActiveUnit();
+
+            if (CheckIfAllPlayerUnitsHaveTakenAction())
+            {
+                NextTurn();
+            }
+        }
+    }
+
     public void NextTurn()
     {
         turnNumber++;
@@ -32,5 +45,17 @@ public class TurnSystem : MonoBehaviour
     public bool IsPlayerTurn()
     {
         return isPlayerTurn;
+    }
+
+    bool CheckIfAllPlayerUnitsHaveTakenAction()
+    {
+        foreach (Unit unit in UnitManager.Instance.GetPlayerUnitsList())
+        {
+            if (!unit.HasTakenAction)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

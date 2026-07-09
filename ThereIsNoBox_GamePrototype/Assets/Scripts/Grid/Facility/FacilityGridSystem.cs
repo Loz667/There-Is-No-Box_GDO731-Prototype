@@ -51,7 +51,7 @@ public class FacilityGridSystem
                 GridPosition gridPosition = new GridPosition(x, z);
 
                 Transform debugTransform = GameObject.Instantiate(debugPrefab, GetWorldPosition(gridPosition), Quaternion.identity);
-                DebugGridObject debugGrid = debugTransform.GetComponent<DebugGridObject>();
+                FacilityDebugGrid debugGrid = debugTransform.GetComponent<FacilityDebugGrid>();
                 debugGrid.SetGridObject(GetFacilityGridObject(gridPosition));
             }
         }
