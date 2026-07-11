@@ -12,7 +12,6 @@ public class DieDefinition : ScriptableObject, IRollable<DieFace>
     {
         if (faces == null || faces.Count == 0) return null;
         int index = Random.Range(0, faces.Count);
-        Debug.Log("DieDef.GetRoll " + index);
         return faces[index];
     }
     

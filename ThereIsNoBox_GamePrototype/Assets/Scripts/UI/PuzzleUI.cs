@@ -6,14 +6,15 @@ public class PuzzleUI : MonoBehaviour
 {
 
     [SerializeField] private TaskView[] taskViews;
-    [SerializeField] private GameObject progressView;
+    [SerializeField] private TaskProgressUI progressView;
 
     [SerializeField] private DicePoolManager dicePool;
     [SerializeField] private DicePoolUI dicePoolUI;
     
     private Puzzle activePuzzle;
     
-    [SerializeField] public Button rollButton;
+    //[SerializeField] public Button rollButton;
+    [SerializeField] public DiceActionArea diceActionArea;
 
     private void Start()
     {
@@ -29,11 +30,11 @@ public class PuzzleUI : MonoBehaviour
 
     public void LoadPuzzleTemp()
     {
+        TempLoadTasks();
         dicePool.InitializeDicePool();
-        if (rollButton != null)
-        {
-            rollButton.onClick.AddListener(RollDice);
-        }
+        
+        diceActionArea.rollButton.onClick.AddListener(RollDice);
+        
         Debug.Log("Loading dice into UI");
         dicePoolUI.LoadDice(dicePool.AllDice);
     }
@@ -63,13 +64,29 @@ public class PuzzleUI : MonoBehaviour
     }
     */
 
+    private void TempLoadTasks()
+    {
+        taskViews[0].Initialize(false);
+    }
+
     public void RollDice()
     {
-        Debug.Log("Rolling Dice");
+        //TODO Add different action depending on current state
+        diceActionArea.ChangeState(DiceActionArea.RollState.Rolled);
         dicePool.TempRollDice();
         dicePoolUI.UpdateSlots();
+        
     }
-    
-    
+
+    public void DieDroppedOnTask()
+    {
+        Debug.Log("PuzzleUI: DieDroppedOnTask called");
+    }
+
+    public void DiscardDie()
+    {
+        Debug.Log("PuzzleUI: DiscardDie called");
+        diceActionArea.ChangeState(DiceActionArea.RollState.Ready);
+    }
     
 }

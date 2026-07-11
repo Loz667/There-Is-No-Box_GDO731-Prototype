@@ -60,6 +60,12 @@ public class DieDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
                 dropTarget.DropDie(dropDie);
             }
         }
+        else
+        {
+            Debug.Log("Drop Target not found.");
+            GameObject dropItem = eventData.pointerEnter;
+            Debug.Log("Trying to drop onto: " + dropItem?.name);
+        }
         
         /*
          * Die = source.GetDie

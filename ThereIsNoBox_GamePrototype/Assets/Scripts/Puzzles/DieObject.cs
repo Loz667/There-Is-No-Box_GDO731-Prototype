@@ -55,7 +55,7 @@ public class DieObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             }
             else
             {
-                
+                /*
                 Debug.Log("Trying to add to a slot that wants " + targetSlot.RequiredType);
                 //DiceRollManager.Instance.RemoveDieFromPool(sourceSlot);
                 if (targetSlot.RequiredType == rollType)
@@ -75,6 +75,7 @@ public class DieObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
                 //OnDieDragComplete?.Invoke(this, Value);
                 
                 //Destroy(source.gameObject);
+                */
             }
         }
         else

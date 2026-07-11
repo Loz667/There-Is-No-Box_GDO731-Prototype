@@ -1,13 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TaskSlotView : MonoBehaviour, IDropTarget
+public class TaskSlotView : MonoBehaviour
 {
     public GameObject currentDie;
     //[SerializeField] private TaskView parentTaskView;
-    [SerializeField] private DiceEnums.RollType requiredType;
+    
     [SerializeField] private Image resultImage;
+
+    private DiceEnums.RollType requiredRollType;
     [SerializeField] private Image taskIcon;
+    private bool hasMatchedDie = false;
+    private bool isActive = false;
+    
     
     public static Color colorGreenTint = new Color(0.2f, 1f, 0.2f, 1f);
 
@@ -29,29 +34,24 @@ public class TaskSlotView : MonoBehaviour, IDropTarget
 
     private Color colorLocked = new Color(0f, 0f, 0f, 1f);
     
-    public DiceEnums.RollType RequiredType {get => requiredType;}
+    public DiceEnums.RollType RequiredType {get => requiredRollType;}
+    public bool IsFilled => hasMatchedDie;
+    
+    public bool IsActive => isActive;
 
+    public void Initialize(DiceEnums.RollType requiredType, Sprite typeIcon)
+    {
+        requiredRollType = requiredType;
+        taskIcon.sprite = typeIcon;
+        hasMatchedDie = false;
+        isActive = true;
+    }
+    
     public void MatchResult()
     {
         resultImage.color = Color.forestGreen;
-        taskIcon.color = colorHeldTint;
+        hasMatchedDie = true;
+        //taskIcon.color = colorHeldTint;
     }
-    public void UpdateTask(int i)
-    {
-        Debug.Log("UpdateTask");
-        //parentTaskView.UpdateValue(i);
-    }
-
-    public bool isDropAllowed(Die dieToDrop)
-    {
-        Debug.Log("Dropped die type: " + dieToDrop.RollType);
-        if (dieToDrop.RollType == requiredType) return true;
-        return false;
-    }
-
-    public void DropDie(Die droppedDie)
-    {
-        Debug.Log("Accepting dropped die - need to do something");
-        MatchResult();
-    }
+   
 }
