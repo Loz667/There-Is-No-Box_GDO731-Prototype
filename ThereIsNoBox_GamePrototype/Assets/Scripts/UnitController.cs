@@ -61,7 +61,7 @@ public class UnitController : MonoBehaviour
             Ray ray = InputHandler.GetMouseRay();
             if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity))
             {
-                Debug.Log("Got a hit");
+                Debug.Log("Got a hit: " + hit.transform.name);
                 IRaycastable raycastable = hit.transform.GetComponent<IRaycastable>();
                 if (raycastable != null)
                 {
