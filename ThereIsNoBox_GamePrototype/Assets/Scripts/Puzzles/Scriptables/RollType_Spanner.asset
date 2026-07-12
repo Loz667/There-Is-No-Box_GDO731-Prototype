@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: RollType_Spanner
   m_EditorClassIdentifier: Assembly-CSharp::RollType
   rollType: 1
-  icon: {fileID: 21300000, guid: 60ceec440473cda4fac21752e7dddcb6, type: 3}
+  rollIcon: {fileID: 21300000, guid: 60ceec440473cda4fac21752e7dddcb6, type: 3}
+  targetIcon: {fileID: 21300000, guid: d3d586db9ee678b499a1ce21d255addf, type: 3}

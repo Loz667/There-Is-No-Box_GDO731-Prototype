@@ -4,7 +4,7 @@ using UnityEngine;
 public class DieFace : ScriptableObject
 {
     public DiceEnums.RollType rollType;
-    public DiceEnums.DieResult resultType;
+    public DiceEnums.DieResult rollResult;
 
     public Sprite image;
 
