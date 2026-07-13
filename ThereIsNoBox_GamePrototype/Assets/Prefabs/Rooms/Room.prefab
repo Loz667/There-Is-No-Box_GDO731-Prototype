@@ -411,7 +411,7 @@ MonoBehaviour:
     doorwayObject: {fileID: 0}
     doorObject: {fileID: 3049815907156563283}
     spawnPoint: {fileID: 5458036222642574384}
-  playerPoint:
+  PlayerPoint:
   - {fileID: 8092053622944462059}
   - {fileID: 3559033225272117678}
   - {fileID: 2829743329537193829}

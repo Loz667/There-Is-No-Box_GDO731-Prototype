@@ -76,7 +76,7 @@ public class FacilityManager : MonoBehaviour
         //TODO Manage active room - needs to be which ever room the active character is in
         
         
-        GridPosition nextRoomPosition = Game.Director.ActiveRoom.roomPosition + new GridPosition(nextRoomDirection.x, nextRoomDirection.y);
+        GridPosition nextRoomPosition = Game.Director.activeRoom.roomPosition + new GridPosition(nextRoomDirection.x, nextRoomDirection.y);
         Debug.Log("DoRoomTransition " + nextRoomDirection);
         //TODO Check that requested direction leads to a valid destination
         
@@ -90,13 +90,13 @@ public class FacilityManager : MonoBehaviour
         
         //TODO This whole thing needs to be a co-routine to handle unit movement, room transition etc. 
         await ScreenFader.Instance.FadeOut();
-        Game.Director.ActiveRoom.SetActiveRoomCamera(false);
+        Game.Director.activeRoom.SetActiveRoomCamera(false);
         //SpawnCharacterInRoom();
         nextRoom.SetActiveRoomCamera(true);
         await Task.Delay(150);
         await ScreenFader.Instance.FadeIn();
         
-        Game.Director.ActiveRoom = nextRoom;
+        Game.Director.activeRoom = nextRoom;
         
     }
     

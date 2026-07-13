@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4702620682501132639}
   - component: {fileID: 3627139449429112012}
   - component: {fileID: 1273474333383154337}
+  - component: {fileID: 2241479803846167092}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -91,3 +92,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c27f49dcc214463ea74540b92dac063b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Character
+--- !u!114 &2241479803846167092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7973882218657348683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7bfdec2b927fa247a23e5232a4e19f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'

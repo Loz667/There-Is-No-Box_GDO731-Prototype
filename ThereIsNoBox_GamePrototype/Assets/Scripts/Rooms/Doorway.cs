@@ -18,8 +18,8 @@ using UnityEngine;
             {
                 //TODO Check that we are in the active room.    
                 Debug.Log("Clicked on door in Room : " + parentRoom.roomPosition);
-                Debug.Log("Current Room in Facility: " + Game.Director.ActiveRoom);
-                if (parentRoom != Game.Director.ActiveRoom)
+                Debug.Log("Current Room in Facility: " + Game.Director.activeRoom);
+                if (parentRoom != Game.Director.activeRoom)
                 {
                     Debug.LogWarning("Trying to move from a room that is not the currently active room");
                 }

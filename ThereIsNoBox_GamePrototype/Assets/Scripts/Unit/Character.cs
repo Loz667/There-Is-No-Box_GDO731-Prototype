@@ -13,9 +13,9 @@ public class Character: MonoBehaviour
     public CharacterDef Data { get; private set; }
     
     private NavMeshAgent agent; //TODO manage this in a 'mover' class?
-    
-    private CharacterState state = CharacterState.Alive;
-    
+
+    public CharacterState Status { get; private set; } = CharacterState.Alive;
+
     private void OnDisable() => UnsubscribeEvents();
 
 
