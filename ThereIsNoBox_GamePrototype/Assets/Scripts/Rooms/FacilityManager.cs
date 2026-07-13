@@ -18,14 +18,21 @@ public class FacilityManager : MonoBehaviour
     [SerializeField] private List<RoomMapping> roomMappings = new  List<RoomMapping>();
 
     private RoomManager[,] roomGrid;
-    public RoomManager ActiveRoom {get; private set;}
+    //public RoomManager ActiveRoom {get; private set;}
+    private RoomManager focusedRoom;
     
     private void Start()
     {
+        
+    }
+
+    public RoomManager Initialize()
+    {
         BuildFacilityGrid();
         RoomManager startRoom =  roomGrid[0, 0];
-        ActiveRoom  = startRoom;
-        startRoom.SetActiveRoomCamera(true);
+        //Game.Director.ActiveRoom  = startRoom;
+        //startRoom.SetActiveRoomCamera(true);
+        return startRoom;
     }
 
     private void BuildFacilityGrid()
@@ -47,18 +54,29 @@ public class FacilityManager : MonoBehaviour
                 
                 roomMapping.roomInstance.Initialize(gridPosition, hasNorth, hasSouth, hasEast, hasWest);
                 roomMapping.roomInstance.SetActiveRoomCamera(false);
-                
             }
         }
     }
 
+    public RoomManager GetRoomAtPosition(int x, int y)
+    {
+        return roomGrid[x, y];
+    }
 
-    public async void DoRoomTransition(Vector2Int nextRoomDirection)
+    //This will allow camera movement between rooms without moving a character
+    public async void FocusOnRoom(Vector2Int focusRoomPosition)
+    {
+        
+        RoomManager newRoom = roomGrid[focusRoomPosition.x, focusRoomPosition.y];
+    }
+
+
+    public async void MoveToRoom(Vector2Int nextRoomDirection)
     {
         //TODO Manage active room - needs to be which ever room the active character is in
         
         
-        GridPosition nextRoomPosition = ActiveRoom.roomPosition + new GridPosition(nextRoomDirection.x, nextRoomDirection.y);
+        GridPosition nextRoomPosition = Game.Director.ActiveRoom.roomPosition + new GridPosition(nextRoomDirection.x, nextRoomDirection.y);
         Debug.Log("DoRoomTransition " + nextRoomDirection);
         //TODO Check that requested direction leads to a valid destination
         
@@ -72,13 +90,13 @@ public class FacilityManager : MonoBehaviour
         
         //TODO This whole thing needs to be a co-routine to handle unit movement, room transition etc. 
         await ScreenFader.Instance.FadeOut();
-        ActiveRoom.SetActiveRoomCamera(false);
+        Game.Director.ActiveRoom.SetActiveRoomCamera(false);
         //SpawnCharacterInRoom();
         nextRoom.SetActiveRoomCamera(true);
         await Task.Delay(150);
         await ScreenFader.Instance.FadeIn();
         
-        ActiveRoom = nextRoom;
+        Game.Director.ActiveRoom = nextRoom;
         
     }
     

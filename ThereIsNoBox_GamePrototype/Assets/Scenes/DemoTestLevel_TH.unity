@@ -1783,6 +1783,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432ff31f55cd52d48bd4bb4d49d5d6dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameDirector
+  _characters:
+  - {fileID: 11400000, guid: a82be73ceb07111409a610764b1d4e84, type: 2}
+  - {fileID: 11400000, guid: 18fb80fa8dcd9104ab1e7e62c5bdcfb2, type: 2}
 --- !u!4 &1005664629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1219807282227090277, guid: 7626aea4b01443649ad3042010c30c09, type: 3}

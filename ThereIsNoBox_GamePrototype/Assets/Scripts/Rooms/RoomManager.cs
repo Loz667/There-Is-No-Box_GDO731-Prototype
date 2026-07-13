@@ -26,6 +26,9 @@ public class RoomManager : MonoBehaviour
     [SerializeField] private DoorWay eastExit;
     [SerializeField] private DoorWay westExit;
     
+    [Header("Where characters should stand")]
+    [SerializeField] List<Transform> playerPoint;
+    
     public GridPosition roomPosition { get; private set; }
     List<Interactable> interactableObjects = new List<Interactable>();
 
@@ -82,6 +85,16 @@ public class RoomManager : MonoBehaviour
         return characterSpawn.position;
     }
 
+    public Vector3 GetCharacterStand(int idx)
+    {
+        if (idx < 0 && idx > playerPoint.Count)
+        {
+            Debug.LogError("Character stand index out of range");
+            return Vector3.zero;
+        }
+
+        return playerPoint[idx].position;
+    }
     public Transform GetCardinalSpawnPoint(Vector2Int incomingDirection)
     {
         if (incomingDirection == Vector2Int.up) return southExit.spawnPoint;

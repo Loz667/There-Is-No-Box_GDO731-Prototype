@@ -16,10 +16,52 @@ public class GameDirector : MonoBehaviour
     
     private GameState _currentState;
     
+    [SerializeField] private GameObject characterPrefab;
+    [SerializeField] private List<CharacterDef> characters;
+    private List<Character> _playerTeam;
     
-    private List<CharacterDef> _characters;
+    public Character ActiveCharacter {get; private set;}
+    private int activeCharIndex = 0;
+    public RoomManager ActiveRoom; //TODO manage getter and setter
+
+
+    private void StartGame()
+    {
+        //Initialize Facility and grid
+        SetupFacility();
+        //Initialize characters
+        
+        //Set first character
+        SetupTeam();
+        ActiveCharacter = _playerTeam[activeCharIndex];
+        
+    }
+
+
+    private void NextCharacter()
+    {
+            activeCharIndex++;
+            if(activeCharIndex > characters.Count) activeCharIndex = 0;
+            ActiveCharacter = _playerTeam[activeCharIndex]; //TODO Check for status. 
+            //TODO switch camera to focus on where character is
+    }
+
+    private void SetupFacility()
+    {
+        RoomManager startRoom = Game.Facility.Initialize();
+        ActiveRoom = startRoom;
+    }
     
-    private Character activeCharacter;
+    
+    
+    private void SetupTeam()
+    {
+        foreach (CharacterDef character in characters)
+        {
+            
+        }
+            
+    }
     
     
 }
