@@ -1,13 +1,10 @@
-
+using System.Threading.Tasks;
 using UnityEngine;
 
     public class Doorway : MonoBehaviour, IRaycastable
     {
-        
-        private enum CardinalPoint {None, North, East, South, West}
-
-        [SerializeField] private CardinalPoint direction;
-        
+   
+        [SerializeField] private RoomManager.CardinalPoint direction;
         
         public void HandleRaycast()
         {
@@ -28,22 +25,6 @@ using UnityEngine;
             {
                 Debug.LogError("Cannot get handle on parent room");
             }
-            Game.Facility.MoveToRoom(NextRoomVector());
+           Game.Facility.MoveToRoom(direction);
         }
-
-        private Vector2Int NextRoomVector()
-        {
-            return direction switch
-            {
-                CardinalPoint.North => Vector2Int.up,
-                CardinalPoint.East => Vector2Int.right,
-                CardinalPoint.South => Vector2Int.down,
-                CardinalPoint.West => Vector2Int.left,
-                _ => Vector2Int.zero
-            };
-        }
-        
-        
-
-
     }

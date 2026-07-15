@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PuzzleUI : MonoBehaviour
+public class PuzzleUI : UIPanel
 {
 
     [SerializeField] private TaskView[] taskViews;
@@ -18,16 +18,24 @@ public class PuzzleUI : MonoBehaviour
 
     private void Start()
     {
-        LoadPuzzleTemp();
+        //LoadPuzzleTemp();
     }
     
     public void ToggleView()
     {
-        Game.HUD.ToggleHUD(gameObject.activeSelf);
+        //Game.PlayerHUD.ToggleHUD(gameObject.activeSelf);
         gameObject.SetActive(!gameObject.activeSelf);
         LoadPuzzleTemp();
     }
 
+    public override void Show()
+    {
+        LoadPuzzleTemp();
+        base.Show();
+    }
+    
+    //TODO Manage unloading of puzzle in Hide
+    
     public void LoadPuzzleTemp()
     {
         TempLoadTasks();

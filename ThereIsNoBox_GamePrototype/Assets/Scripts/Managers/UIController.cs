@@ -2,27 +2,97 @@ using System;
 using UnityEngine;
     public class UIController: MonoBehaviour
     {
-
-        public PuzzleUI puzzleUI;
+        public PlayerHUD playerHUD;
         public MapView mapView;
+        public PuzzleUI puzzleUI;
+       
         
+        
+        private UIPanel currentPanel;
+        private UIPanel prevPanel;
         
         void OnEnable() => SubscribeEvents();
         void OnDisable() => UnsubscribeEvents();
 
-        public void TogglePuzzleView()
+        private void Start()
         {
-            puzzleUI.ToggleView();
+            playerHUD.Show();
+            mapView.Hide();
+            puzzleUI.Hide();
+            currentPanel = playerHUD;
+        }
+        
+        /*
+        //TODO Figure out the logic behind this
+        public void OpenPanel(UIPanel panel)
+        {
+            if (currentPanel == panel || panel.IsOpen) return;
+            prevPanel = currentPanel;
+            currentPanel = panel;
+            prevPanel.Hide();
+            currentPanel.Show();
+        }
+        
+        
+        //TODO Do we ever not want to go back to the PlayerHUD?
+        public void ClosePanel(UIPanel panel)
+        {
+            if (currentPanel != panel || !panel.IsOpen) return;
+            currentPanel.Hide();
+            if (prevPanel != null)
+            {
+                prevPanel.Show();
+                currentPanel = prevPanel;
+            }
+            else
+            {
+                playerHUD.Show();
+                currentPanel = playerHUD;
+            }
+
+        }
+        */
+
+        public void OpenPuzzleView()
+        {
+            Debug.Log("UIController.OpenPuzzleView");
+            playerHUD.Hide();
+            puzzleUI.Show();
         }
 
+        public void ClosePuzzleView()
+        {
+            puzzleUI.Hide();
+            playerHUD.Show();
+        }
+        
+        
         public void ToggleMapView()
         {
-            Debug.Log("ToggleMapView called");
-            Game.HUD.ToggleHUD(mapView.IsActive);
-            mapView.ToggleView();
+            if (mapView.IsOpen)
+            {
+                mapView.Hide();
+                playerHUD.Show();
+            }
+            else
+            {
+                playerHUD.Hide();
+                mapView.Show();
+            }
         }
-
-       
+        
+        public void ToggleHUD(bool state)
+        {
+        
+            //HUD.SetActive(state);
+        }
+        
+        public void TogglePuzzleView()
+        {
+            Debug.Log("Puzzle view toggled");
+            //puzzleUI.ToggleView();
+            if (!puzzleUI.IsOpen)  {OpenPuzzleView();} else  {ClosePuzzleView();}
+        }
 
 
         private void SubscribeEvents()

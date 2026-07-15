@@ -71,10 +71,11 @@ public class FacilityManager : MonoBehaviour
     }
 
 
-    public async void MoveToRoom(Vector2Int nextRoomDirection)
+    //public async void MoveToRoom(Vector2Int nextRoomDirection)
+    public async void MoveToRoom(RoomManager.CardinalPoint direction)
     {
         //TODO Manage active room - needs to be which ever room the active character is in
-        
+        Vector2Int nextRoomDirection = RoomManager.NextRoomVector(direction); 
         
         GridPosition nextRoomPosition = Game.Director.activeRoom.roomPosition + new GridPosition(nextRoomDirection.x, nextRoomDirection.y);
         Debug.Log("DoRoomTransition " + nextRoomDirection);
@@ -88,17 +89,49 @@ public class FacilityManager : MonoBehaviour
             return;
         }
         
-        //TODO This whole thing needs to be a co-routine to handle unit movement, room transition etc. 
-        await ScreenFader.Instance.FadeOut();
-        Game.Director.activeRoom.SetActiveRoomCamera(false);
-        //SpawnCharacterInRoom();
-        nextRoom.SetActiveRoomCamera(true);
-        await Task.Delay(150);
-        await ScreenFader.Instance.FadeIn();
+        Transform exitPoint = Game.Director.activeRoom.GetRoomEntryPoint(-nextRoomDirection);
+        Transform entryPoint = nextRoom.GetRoomEntryPoint(nextRoomDirection);
         
-        Game.Director.activeRoom = nextRoom;
+        Debug.Log("Exit from : " + exitPoint.name + " " + exitPoint.position);
+        Debug.Log("Enter into: " + entryPoint.name);
+        
+        Mover movable = Game.Director.ActiveCharacter.GetComponent<Mover>();
+        if (movable == null) return;
+        
+        bool atExit = await movable.MoveToAsync(exitPoint.position);
+        Debug.Log("Finished moving");
+        if (atExit)
+        {
+            //TODO This whole thing needs to be a co-routine to handle unit movement, room transition etc. 
+            await DoRoomTransition(nextRoom, movable, entryPoint.position);
+            movable.MoveTo(nextRoom.GetCharacterStand(Game.Director.CharacterIndex));
+            Game.Director.activeRoom = nextRoom;
+        }
+        else
+        {
+            Debug.Log("Character not at exit?");
+        }
         
     }
-    
-    
+
+    private async Task DoRoomTransition(RoomManager nextRoom, Mover mover, Vector3 target)
+    {
+        Debug.Log("DoRoomTransition");
+        if (nextRoom == null)
+        {
+            Debug.Log("nextRoom is null");
+            return;
+        }
+        RoomManager oldRoom = Game.Director.activeRoom;
+        await ScreenFader.Instance.FadeOut();
+        if(oldRoom != null) oldRoom.SetActiveRoomCamera(false);
+        
+        mover.WarpToPoint(target);
+        Game.Director.ActiveCharacter.EnterRoom(nextRoom);
+        
+        nextRoom.SetActiveRoomCamera(true);
+        
+        await Task.Delay(150);
+        await ScreenFader.Instance.FadeIn();
+    }
 }

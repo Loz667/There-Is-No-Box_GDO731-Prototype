@@ -1,13 +1,5 @@
 using UnityEngine;
-public class MapView: MonoBehaviour
+public class MapView: UIPanel
 {
-    
-    public bool IsActive => base.gameObject.activeSelf;
-    
-    public void ToggleView()
-    {
-        //Game.HUD.ToggleHUD(gameObject.activeSelf);
-        base.gameObject.SetActive(!gameObject.activeSelf);
-    }
-    
+ 
 }

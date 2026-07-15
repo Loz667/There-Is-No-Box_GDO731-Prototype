@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class RoomManager : MonoBehaviour
 {
+    public enum CardinalPoint {None, North, East, South, West}
+    
     [Header("Room Definition")] 
     [SerializeField] private RoomDef roomData;
     
@@ -31,6 +33,8 @@ public class RoomManager : MonoBehaviour
     
     public GridPosition roomPosition { get; private set; }
     List<Interactable> interactableObjects = new List<Interactable>();
+    
+    List<Character> characterList = new List<Character>();
 
     void Start()
     {
@@ -95,21 +99,18 @@ public class RoomManager : MonoBehaviour
 
         return PlayerPoint[idx].position;
     }
-    public Transform GetCardinalSpawnPoint(Vector2Int incomingDirection)
+    public Transform GetRoomEntryPoint(Vector2Int incomingDirection)
     {
         if (incomingDirection == Vector2Int.up) return southExit.spawnPoint;
-        
-        // Traveling South (-Y/Down vector) means we cross the North threshold of the next room
         if (incomingDirection == Vector2Int.down) return northExit.spawnPoint;
-        
-        // Traveling East (+X/Right vector) means we cross the West threshold of the next room
         if (incomingDirection == Vector2Int.right) return westExit.spawnPoint;
-        
-        // Traveling West (-X/Left vector) means we cross the East threshold of the next room
         if (incomingDirection == Vector2Int.left) return eastExit.spawnPoint;
         
         return transform;
     }
+
+    public void AddCharacter(Character character) => characterList.Add(character);
+    public void RemoveCharacter(Character character) => characterList.Remove(character);
 
     void CreateInteractableObjectsList(Transform parent)
     {
@@ -123,4 +124,17 @@ public class RoomManager : MonoBehaviour
             CreateInteractableObjectsList(child);
         }
     }
+    
+    public static Vector2Int NextRoomVector(CardinalPoint direction)
+    {
+        return direction switch
+        {
+            CardinalPoint.North => Vector2Int.up,
+            CardinalPoint.East => Vector2Int.right,
+            CardinalPoint.South => Vector2Int.down,
+            CardinalPoint.West => Vector2Int.left,
+            _ => Vector2Int.zero
+        };
+    }
+    
 }
