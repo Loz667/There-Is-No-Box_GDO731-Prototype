@@ -29,8 +29,8 @@ public class DiceRemovalUI : MonoBehaviour, IDropTarget
 
     public void DropDie(Die droppedDie)
     {
-        droppedDie.State = DiceEnums.DieState.Discarded;
-        GetComponentInParent<PuzzleUI>()?.DiscardDie();
+        //droppedDie.State = DiceEnums.DieState.Discarded;
+        GetComponentInParent<PuzzleUI>()?.DiscardDie(droppedDie);
         /*
         PuzzleUI puzzleController = GetComponentInParent<PuzzleUI>();
         if (puzzleController != null)

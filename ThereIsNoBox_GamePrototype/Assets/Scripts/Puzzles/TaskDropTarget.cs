@@ -10,7 +10,7 @@ public class TaskDropTarget : MonoBehaviour, IDropTarget
     
     public bool isDropAllowed(Die dieToDrop)
     {
-        Debug.Log("Dropped die type: " + dieToDrop.RollType);
+        Debug.Log("TASKDROPTARGET: Dropped die type: " + dieToDrop.RollType);
         if (dieToDrop.RollType == requiredType) return true;
         return false;
     }
