@@ -12,7 +12,7 @@ public class UnitController : MonoBehaviour
         
         if (InteractWithObject()) return;
 
-        MoveToCursor();
+        if (MoveToCursor()) return;
         //UpdateAnimator();
         //HandleInteraction(); //TODO rename to something SELECT ?
 
@@ -61,7 +61,7 @@ public class UnitController : MonoBehaviour
             Ray ray = InputHandler.GetMouseRay();
             if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity))
             {
-                Debug.Log("Got a hit");
+                Debug.Log("Got a hit: " + hit.transform.name);
                 IRaycastable raycastable = hit.transform.GetComponent<IRaycastable>();
                 if (raycastable != null)
                 {
@@ -74,18 +74,58 @@ public class UnitController : MonoBehaviour
         return false;
     }
 
-    private void MoveToCursor()
+    private bool MoveToCursor()
     {
         if (InputHandler.Controls.Player.Interact.triggered)
         {
+            Vector3 target;
+            bool hasHit = RaycastNavMesh(out target);
+            if (hasHit)
+            {
+                if (Game.Director.ActiveCharacter == null)
+                {
+                    Debug.LogError("No active character");
+                    return false;
+                }
+                Mover movable = Game.Director.ActiveCharacter.GetComponent<Mover>();
+                if (!movable.CanMoveTo(target)) return false;
+                
+                movable.MoveTo(target);
+                return true;
+            }
+
+            
+            /*
             Ray ray = InputHandler.GetMouseRay();
             if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity))
             {
                 // Move the player to the hit point
-                NavMeshAgent agent = UnitActionSystem.Instance.GetSelectedUnit().GetComponent<NavMeshAgent>();
-                agent.SetDestination(hit.point);
+                //NavMeshAgent agent = UnitActionSystem.Instance.GetSelectedUnit().GetComponent<NavMeshAgent>();
+                //agent.SetDestination(hit.point);
+                Mover movable = Game.Director.ActiveCharacter.GetComponent<Mover>();
+                if(!movable.CanMoveTo(hit.point))
             }
+            */
         }
+        return false;
+    }
+    
+    private bool RaycastNavMesh(out Vector3 target)
+    {
+        target = new Vector3();
+
+        RaycastHit hit;
+        bool hasHit = Physics.Raycast(InputHandler.GetMouseRay(), out hit);
+        if (!hasHit) return false;
+
+        NavMeshHit navMeshHit;
+        bool hasCastToNavMesh = NavMesh.SamplePosition(
+            hit.point, out navMeshHit, 1f, NavMesh.AllAreas);
+        if (!hasCastToNavMesh) return false;
+
+        target = navMeshHit.position;
+
+        return true;
     }
 
     //private void UpdateAnimator()

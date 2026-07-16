@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e13251883f464372921c509dd910e092, type: 3}
+  m_Name: Security_Char
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterDef
+  CharacterName: The Head Of Security
+  CharacterPrefab: {fileID: 1930443796748830, guid: a1f759bcbac09e94c97d1704ba162502, type: 3}
+  Portrait: {fileID: 21300000, guid: 4d7fde5bf313d2648bab3eaccf354ff0, type: 3}
+  MaxHealth: 5
+  MaxMorale: 5

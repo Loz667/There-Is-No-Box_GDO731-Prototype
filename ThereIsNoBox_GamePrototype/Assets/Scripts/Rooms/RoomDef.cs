@@ -5,6 +5,7 @@ public class RoomDef: ScriptableObject
 {
         public string RoomName;
         public string RoomDescription;
-        
-        
+
+        public Sprite RoomMapImage; 
+        //TODO Add prefab if we're going to randomly generate rooms
 }
