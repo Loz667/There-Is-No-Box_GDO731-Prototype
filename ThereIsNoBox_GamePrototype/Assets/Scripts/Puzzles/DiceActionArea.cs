@@ -21,6 +21,7 @@ public class DiceActionArea : MonoBehaviour
 
     public void SetButtonActive(bool isActive)
     {
+        discardUI.Show();
         discardUI.AllowDiscard = !isActive;
         if(isActive) buttonAnimator.SetTrigger(Normal);
         buttonAnimator.SetBool(IsActive, isActive);
@@ -29,7 +30,8 @@ public class DiceActionArea : MonoBehaviour
 
     public void SetHidden()
     {
-        curState = RollState.Hidden;
+        discardUI.AllowDiscard = false;
+        discardUI.Hide();
     }
 
     public void ChangeState(RollState newState)

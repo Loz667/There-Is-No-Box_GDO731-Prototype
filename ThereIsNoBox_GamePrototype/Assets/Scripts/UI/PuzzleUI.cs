@@ -69,8 +69,7 @@ public class PuzzleUI : UIPanel
         //foreach (TaskData task in tasks)
         for(int i = 0; i < tasks.Count; i++)
         {
-            taskViews[i].LoadTask(tasks[i]);
-            //TaskView.LoadTask(task)
+            taskViews[i].LoadTask(tasks[i], this);
         }
     }
  
@@ -106,13 +105,19 @@ public class PuzzleUI : UIPanel
                 break;
         }
     }
+
+    public bool AllowDieDrop(TaskView task)
+    {
+        if(state != PuzzleStates.Rolling) return false;
+        return activeTask == null || task == activeTask;
+    }
     
     public void DieDroppedOnTask(Die droppedDie, TaskView task)
     {
         Debug.Log($"PuzzleUI: {droppedDie.RollType} on {task}");
-        if(state != PuzzleStates.Rolling) return;
+        //if(state != PuzzleStates.Rolling) return;
 
-        if (activeTask != null && task != activeTask) return; //Tried dropping on another task after starting one
+       //if (activeTask != null && task != activeTask) return; //Tried dropping on another task after starting one
         
         if (activeTask == null)
         {
@@ -121,6 +126,7 @@ public class PuzzleUI : UIPanel
         }
         
         activeTask.UpdateTask(droppedDie);
+        diceActionArea.ChangeState(DiceActionArea.RollState.Hidden);
         if (activeTask.IsTaskComplete())
         {
             Debug.Log("Woohoo! Task has been completed.");
@@ -140,6 +146,18 @@ public class PuzzleUI : UIPanel
             activeTask = null;
             ChangeState( PuzzleStates.PostRoll );
         }
+    }
+
+    public void CancelActiveTask(TaskView task)
+    {
+        Debug.Log($"PuzzleUI: Cancelling task: {task}");
+        if(state != PuzzleStates.Rolling) return;
+        if (activeTask == null) return; //Have not yet set an active task
+        if (activeTask != null && task != activeTask) return; //Trying to cancel a task that isn't the active one
+        
+        activeTask = null;
+        diceActionArea.ChangeState(DiceActionArea.RollState.Rolled);
+        ResetRolledDice();
     }
 
     public void DiscardDie(Die droppedDie)

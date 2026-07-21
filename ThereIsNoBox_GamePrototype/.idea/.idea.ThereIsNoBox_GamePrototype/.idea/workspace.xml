@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f9b36042-ff5a-43f5-a8c3-bfba2d43307f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ThereIsNoBox_GamePrototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThereIsNoBox_GamePrototype/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/TaskIcon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/TaskIcon.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rooms/ReactorRoom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rooms/ReactorRoom.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DicePuzzles.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DicePuzzles.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/DicePoolSlotUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/DicePoolSlotUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/DieDragHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/DieDragHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/DieFaceUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/DieFaceUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TaskSlotView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TaskSlotView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/DiceActionArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/DiceActionArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/DiceRemovalUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/DiceRemovalUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TaskView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TaskView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PuzzleUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PuzzleUI.cs" afterDir="false" />
     </list>
@@ -145,7 +140,7 @@
       <workItem from="1783333331663" duration="12929000" />
       <workItem from="1783435181581" duration="39364000" />
       <workItem from="1784190872942" duration="6219000" />
-      <workItem from="1784199231726" duration="23935000" />
+      <workItem from="1784199231726" duration="26129000" />
     </task>
     <servers />
   </component>

@@ -30,6 +30,8 @@ public class TaskView : MonoBehaviour, IDropTarget
     [SerializeField] private Button closeButton;
     [SerializeField] private GameObject completeStripe;
     
+    PuzzleUI puzzleController;
+    
     //[SerializeField] private List<DiceEnums.RollType> requiredTypes;
     private List<DiceEnums.RollType> requiredTypes = new List<DiceEnums.RollType>();
     public List<Die> CommittedDice { get; private set; }= new List<Die>();
@@ -42,7 +44,7 @@ public class TaskView : MonoBehaviour, IDropTarget
     private TaskState state = TaskState.InActive;
     public bool IsActive => state == TaskState.Active;
 
-    public void LoadTask(TaskData newTask)
+    public void LoadTask(TaskData newTask, PuzzleUI controller)
     {
         requiredTypes.Clear();
         CommittedDice.Clear();
@@ -56,6 +58,7 @@ public class TaskView : MonoBehaviour, IDropTarget
         completeStripe.SetActive(false);
         taskCover.anchoredPosition = new Vector2(taskCover.anchoredPosition.x, openCover);
         state = TaskState.Active;
+        puzzleController = controller;
     }
    
     private void LoadGlyph(TaskSlotView taskSlot, RequiredRollData glyph)
@@ -66,21 +69,16 @@ public class TaskView : MonoBehaviour, IDropTarget
        
     }
     
-    
     public bool isDropAllowed(Die dieToDrop)
     {
        Debug.Log("RequiredTypes: " + string.Join(", ", requiredTypes));
-        return requiredTypes.Contains(dieToDrop.RollType);
+        return puzzleController.AllowDieDrop(this) && requiredTypes.Contains(dieToDrop.RollType);
     }
 
     public void DropDie(Die droppedDie)
     {
         Debug.Log("TaskView::DropDie");
-        PuzzleUI puzzleController = GetComponentInParent<PuzzleUI>();
-        if (puzzleController != null)
-        {
-            puzzleController.DieDroppedOnTask(droppedDie, this);
-        }
+        puzzleController?.DieDroppedOnTask(droppedDie, this);
     }
 
     public void UpdateTask(Die droppedDie)
@@ -158,17 +156,14 @@ public class TaskView : MonoBehaviour, IDropTarget
 
     public void FailTask()
     {
+        puzzleController?.CancelActiveTask(this);
         SetSelected(false);
-        GetComponentInParent<PuzzleUI>()?.ResetRolledDice();
         foreach (TaskSlotView taskSlot in targetSlots)
         {
             taskSlot.ResetResult();    
         }
-        
     }
-    
-    
-    
+
     //TEST CODE
     /*
     public void Initialize(bool isHidden)

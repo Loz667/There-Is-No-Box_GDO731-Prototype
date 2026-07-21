@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DiceRemovalUI : MonoBehaviour, IDropTarget
+public class DiceRemovalUI : UIPanel, IDropTarget
 {
     
     [SerializeField] private Image portalImage;
