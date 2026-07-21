@@ -8,6 +8,7 @@ public class DicePoolSlotUI : MonoBehaviour
     //[SerializeField] private Image faceIcon;
     //[SerializeField] private Sprite emptySlot;
     [SerializeField] private DieFaceUI dieFace;
+   
     
     private int index;
     private Die die;
@@ -20,7 +21,7 @@ public class DicePoolSlotUI : MonoBehaviour
     
     void Start()
     {
-        slotBg.color = colorLocked;
+        //slotBg.color = colorLocked;
         //faceIcon.sprite = emptySlot;
         //faceIcon.color = colorUnavailable;
     }
@@ -66,6 +67,11 @@ public class DicePoolSlotUI : MonoBehaviour
         {
             dieFace.State = DieFaceUI.SlotState.EMPTY;
         }
+    }
+
+    public void SetDieDraggedState()
+    {
+        dieFace.State = DieFaceUI.SlotState.DRAGGING;
     }
     
     

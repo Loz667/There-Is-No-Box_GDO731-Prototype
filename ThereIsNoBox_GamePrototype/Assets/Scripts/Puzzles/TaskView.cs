@@ -159,6 +159,12 @@ public class TaskView : MonoBehaviour, IDropTarget
     public void FailTask()
     {
         SetSelected(false);
+        GetComponentInParent<PuzzleUI>()?.ResetRolledDice();
+        foreach (TaskSlotView taskSlot in targetSlots)
+        {
+            taskSlot.ResetResult();    
+        }
+        
     }
     
     

@@ -150,7 +150,11 @@ public class PuzzleUI : UIPanel
         ChangeState( PuzzleStates.PostRoll );
        
     }
-    
+
+    public void ResetRolledDice()
+    {
+        dicePoolUI.UpdateSlots();
+    }
     
 
     private void CheckPuzzleProgression()

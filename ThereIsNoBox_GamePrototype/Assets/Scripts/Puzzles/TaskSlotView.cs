@@ -43,8 +43,9 @@ public class TaskSlotView : MonoBehaviour
     {
         requiredRollType = requiredType;
         taskIcon.sprite = typeIcon;
-        hasMatchedDie = false;
+        //hasMatchedDie = false;
         isActive = true;
+        ResetResult();
     }
     
     public void MatchResult()
@@ -53,5 +54,10 @@ public class TaskSlotView : MonoBehaviour
         hasMatchedDie = true;
         //taskIcon.color = colorHeldTint;
     }
-   
+
+    public void ResetResult()
+    {
+        resultImage.color = Color.red;
+        hasMatchedDie = false;
+    }
 }

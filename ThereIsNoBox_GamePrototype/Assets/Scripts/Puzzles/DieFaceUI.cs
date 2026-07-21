@@ -8,7 +8,9 @@ public class DieFaceUI : UIPanel
     {
         EMPTY,
         AVAILABLE,
-        ROLLED
+        ROLLED,
+        DRAGGING,
+        LOCKED
     } 
     
     [SerializeField] private Image faceIcon;
@@ -37,6 +39,7 @@ public class DieFaceUI : UIPanel
     public void SetDieFace(Sprite sprite)
     {
         faceIcon.sprite = sprite;
+       
     }
     
     private void StateChanged()
@@ -49,6 +52,15 @@ public class DieFaceUI : UIPanel
                 break;
             case SlotState.ROLLED:
                 canvasGroup.interactable = true;
+                canvasGroup.alpha = 1f;
+                canvasGroup.blocksRaycasts = true;
+                break;
+            case SlotState.DRAGGING:
+                canvasGroup.blocksRaycasts = false;
+                canvasGroup.alpha = 0.6f;
+                break;
+            case SlotState.LOCKED:
+                faceIcon.color = Color.purple;
                 break;
             case SlotState.EMPTY:
                 Hide();
