@@ -11,7 +11,7 @@ public class DieDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     //private Transform _newParent;
     //Original slot?
     private Canvas parentCanvas;
-    private CanvasGroup canvasGroup;
+    //private CanvasGroup canvasGroup;
     
     void Awake()
     {
@@ -22,15 +22,16 @@ public class DieDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     
     void Start()
     {
-        canvasGroup = GetComponent<CanvasGroup>();
+        //canvasGroup = GetComponent<CanvasGroup>();
     }
     
     public void OnBeginDrag(PointerEventData eventData)
     {
         _initialPosition = transform.position;
         _originalParent = transform.parent;
-        canvasGroup.blocksRaycasts = false;
-        canvasGroup.alpha = 0.6f;
+        //canvasGroup.blocksRaycasts = false;
+        //canvasGroup.alpha = 0.6f;
+        _source.SetDieDraggedState();
         transform.SetParent(parentCanvas.transform, true); //Canvas object
     }
 
@@ -43,7 +44,7 @@ public class DieDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     {
         //Return gameObject to initial position
         transform.position = _initialPosition;
-        GetComponent<CanvasGroup>().blocksRaycasts = true;
+        //canvasGroup.blocksRaycasts = true;
         transform.SetParent(_originalParent, true);
         
         //Get DropTarget - could be taskViewSlot, disposalSlot, focusSlot?
@@ -59,14 +60,21 @@ public class DieDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
                 _source.RemoveDie();
                 dropTarget.DropDie(dropDie);
             }
+            else
+            {
+                _source.UpdateFace();
+            }
         }
         else
         {
             Debug.Log("Drop Target not found.");
             GameObject dropItem = eventData.pointerEnter;
             Debug.Log("Trying to drop onto: " + dropItem?.name);
+            _source.UpdateFace();
+            //canvasGroup.alpha = 1f;
         }
         
+        //_source.ResetSlot();
         /*
          * Die = source.GetDie
          * source.RemoveDie

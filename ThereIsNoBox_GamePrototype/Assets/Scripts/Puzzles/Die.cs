@@ -37,8 +37,9 @@ public class Die
             return null;
         }
     }
-    
-    
+
+    public bool IsUsable => _curState == DiceEnums.DieState.Rolling || _curState == DiceEnums.DieState.Added;
+
     /*
     {
         get => _rolledFace.resultType; //_curResult;
@@ -51,7 +52,7 @@ public class Die
                 ResultChanged();
             }
         }
-       
+
     }
     */
 
@@ -71,7 +72,7 @@ public class Die
     public Die(DieDefinition _newDef)
     {
         _def = _newDef;
-        _curState = DiceEnums.DieState.Available;
+        _curState = DiceEnums.DieState.Added;
         _curResult = DiceEnums.DieResult.EMPTY;
         _curType = DiceEnums.RollType.NONE;
         _rolledFace = null;
@@ -79,10 +80,17 @@ public class Die
 
     public void Roll()
     {
-        //Debug.Log("Rolling Die");
-        _rolledFace = _def.GetRoll();
-        //Debug.Log("RolledFace = " + _rolledFace.rollResult);
-        _curState = DiceEnums.DieState.Rolling;
+        if (_curState == DiceEnums.DieState.Rolling || _curState == DiceEnums.DieState.Added)
+        {
+            Debug.Log("Die::Roll()");
+            _rolledFace = _def.GetRoll();
+            //Debug.Log("RolledFace = " + _rolledFace.rollResult);
+            _curState = DiceEnums.DieState.Rolling;
+        }
+        else
+        {
+            Debug.Log("Die state = " + _curState + " - not rolling");
+        }
     }
 
     public void ModifyResult(DieFace newResult)

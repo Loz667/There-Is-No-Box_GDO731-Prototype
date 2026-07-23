@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c1c7dcb00c428a45923db11b263aafa, type: 3}
   m_Name: RollType_Number
   m_EditorClassIdentifier: Assembly-CSharp::RollType
-  rollType: 9
-  icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  rollType: 10
+  rollIcon: {fileID: 21300000, guid: c9f41a6cd5551664aa4b9ec51c845a2b, type: 3}
+  targetIcon: {fileID: 21300000, guid: 6797c1a22abc8a94c936acaacd7631de, type: 3}

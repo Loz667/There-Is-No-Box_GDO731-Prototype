@@ -20,7 +20,7 @@ public class Puzzle: ScriptableObject
     //TODO Decide if task progression maintains between attempts or resets each time
     //TODO Decide if a task can be attempted multiple times in the same turn
     
-
+    
 
 
 }

@@ -34,7 +34,7 @@ public class DicePoolUI : MonoBehaviour
     {
         foreach (DicePoolSlotUI slot in diceSlots)
         {
-            slot.ResetDie();
+            slot.ResetSlot();
         }
     }
 
