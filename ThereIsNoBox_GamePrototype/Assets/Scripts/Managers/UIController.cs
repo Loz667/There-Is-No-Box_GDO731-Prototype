@@ -53,11 +53,11 @@ using UnityEngine;
         }
         */
 
-        public void OpenPuzzleView()
+        public void OpenPuzzleView(Puzzle puzzle)
         {
             Debug.Log("UIController.OpenPuzzleView");
             playerHUD.Hide();
-            puzzleUI.Show();
+            puzzleUI.LoadPuzzle(puzzle);
         }
 
         public void ClosePuzzleView()
@@ -87,12 +87,14 @@ using UnityEngine;
             //HUD.SetActive(state);
         }
         
+        /*
         public void TogglePuzzleView()
         {
             Debug.Log("Puzzle view toggled");
             //puzzleUI.ToggleView();
             if (!puzzleUI.IsOpen)  {OpenPuzzleView();} else  {ClosePuzzleView();}
         }
+        */
 
 
         private void SubscribeEvents()

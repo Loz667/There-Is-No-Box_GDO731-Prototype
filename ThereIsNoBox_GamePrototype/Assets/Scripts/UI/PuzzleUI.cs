@@ -32,17 +32,16 @@ public class PuzzleUI : UIPanel
     
     private void Start()
     {
-        if(debugMode) LoadPuzzle(demoPuzzle);//LoadPuzzleTemp();
-    }
-    
-    public override void Show()
-    {
-        //LoadPuzzleTemp();
-        base.Show();
+        //if(debugMode) LoadPuzzle(demoPuzzle);//LoadPuzzleTemp();
     }
     
     //TODO Manage unloading of puzzle in Hide
-    
+    public override void Hide()
+    {
+        base.Hide();
+        state = PuzzleStates.None;
+        activePuzzle = null;
+    }
     
     public void LoadPuzzle(Puzzle puzzle)
     {
@@ -59,6 +58,7 @@ public class PuzzleUI : UIPanel
             Debug.Log("Loading dice into UI");
             dicePoolUI.LoadDice(dicePool.AllDice);
             state = PuzzleStates.PreRoll;
+            Show();
         }
     }
 
