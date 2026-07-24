@@ -20,6 +20,7 @@ public class DicePoolUI : MonoBehaviour
         {
             diceSlots[i++].AddDie(die);
         }
+        UpdateSlots();
     }
 
     public void UpdateSlots()

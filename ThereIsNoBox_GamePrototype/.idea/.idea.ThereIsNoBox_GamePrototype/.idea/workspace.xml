@@ -6,13 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="f9b36042-ff5a-43f5-a8c3-bfba2d43307f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ThereIsNoBox_GamePrototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThereIsNoBox_GamePrototype/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Environment/Materials/EntranceHall/M_AC.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Environment/Materials/EntranceHall/M_AC.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Environment/Materials/EntranceHall/M_Cooler.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Environment/Materials/EntranceHall/M_Cooler.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Environment/Materials/EntranceHall/M_Elevator.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Environment/Materials/EntranceHall/M_Elevator.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Environment/Materials/EntranceHall/M_Vent.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Environment/Materials/EntranceHall/M_Vent.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rooms/ContainmentRoom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rooms/ContainmentRoom.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rooms/ContainmentRoom.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rooms/ContainmentRoom.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoTestLevel_TH.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoTestLevel_TH.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/LabPuzzle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/LabPuzzle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/PuzzleHUD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/PuzzleHUD.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LabPuzzle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LabPuzzle.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/DicePoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/DicePoolManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/DicePoolSlotUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/DicePoolSlotUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/DicePoolUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/DicePoolUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Die.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Die.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +60,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "new-characters",
+    "git-widget-placeholder": "Lab-Puzzle",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -143,7 +143,7 @@
       <workItem from="1783333331663" duration="12929000" />
       <workItem from="1783435181581" duration="39364000" />
       <workItem from="1784190872942" duration="6219000" />
-      <workItem from="1784199231726" duration="33581000" />
+      <workItem from="1784199231726" duration="45885000" />
     </task>
     <servers />
   </component>

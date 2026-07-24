@@ -84,7 +84,8 @@ public class Die
         {
             Debug.Log("Die::Roll()");
             _rolledFace = _def.GetRoll();
-            //Debug.Log("RolledFace = " + _rolledFace.rollResult);
+            Debug.Log("RolledFace = " + _rolledFace.rollResult);
+            Debug.Log("RolledFace icon = " + _rolledFace.image);
             _curState = DiceEnums.DieState.Rolling;
         }
         else

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4387998b19e6cce47b0dfa2e5e3f9520, type: 3}
+  m_Name: LabDie
+  m_EditorClassIdentifier: Assembly-CSharp::DieDefinition
+  faces:
+  - {fileID: 11400000, guid: 30dd94647b2a7bd42b87f8d564eaa6e9, type: 2}
+  - {fileID: 11400000, guid: 8ef8edd830ff71c45af68a5ea89ee1b7, type: 2}
+  - {fileID: 11400000, guid: 8ef8edd830ff71c45af68a5ea89ee1b7, type: 2}
+  - {fileID: 11400000, guid: 8ef8edd830ff71c45af68a5ea89ee1b7, type: 2}
+  - {fileID: 11400000, guid: 8ef8edd830ff71c45af68a5ea89ee1b7, type: 2}
+  - {fileID: 11400000, guid: 30dd94647b2a7bd42b87f8d564eaa6e9, type: 2}
+  dieColor: {r: 0, g: 0, b: 0, a: 0}
