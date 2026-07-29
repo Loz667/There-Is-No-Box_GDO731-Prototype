@@ -89,10 +89,10 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639209312882423452
+  lastModified: 639209387984814510
   FileSizes:
   - Name: Desktop
-    Value: 1968576
+    Value: 3170592
   Exists: 1
 --- !u!114 &-2450911597859741965
 MonoBehaviour:
@@ -136,7 +136,7 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639209325624831452
+  lastModified: 639209366694174898
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -285,13 +285,14 @@ MonoBehaviour:
   - {fileID: -374012220205658665}
   - {fileID: 5659427368881921438}
   - {fileID: -5981684490145347055}
+  - {fileID: 850856089925639992}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1917608728381938111}
   StringsBanks:
   - {fileID: 6171030601845811041}
   cacheVersion: 131860
-  cacheTime: 639209348981612229
+  cacheTime: 639209387984814510
   SerializableEventsDict:
   - key: event:/Ambient/Ambient-CoolerBubbles
     index: 0
@@ -327,6 +328,8 @@ MonoBehaviour:
     index: 15
   - key: event:/Ambient/Ambient-ReactorRumble
     index: 16
+  - key: event:/SFX/SFX-CreatureMonitor
+    index: 17
 --- !u!114 &751713181987563428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,11 +372,38 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/Ambient.bank
   Name: Ambient
   StudioPath: bank:/Ambient
-  lastModified: 639209348981612229
+  lastModified: 639209356994641133
   FileSizes:
   - Name: Desktop
-    Value: 1734080
+    Value: 2157920
   Exists: 1
+--- !u!114 &850856089925639992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX-CreatureMonitor
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/SFX-CreatureMonitor
+  Guid:
+    Data1: 1999548708
+    Data2: 1226203439
+    Data3: 381079439
+    Data4: 2079653612
+  Banks:
+  - {fileID: -2570159834881166646}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 34000
 --- !u!114 &1363842830711709085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,10 +581,10 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639209325624861217
+  lastModified: 639209366694200122
   FileSizes:
   - Name: Desktop
-    Value: 1700
+    Value: 1756
   Exists: 1
 --- !u!114 &6461614954320477960
 MonoBehaviour:
