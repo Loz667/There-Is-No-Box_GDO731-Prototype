@@ -4,7 +4,7 @@ using UnityEngine;
 [Serializable]
 public class RequiredRollData
 {
-   public RollType rollType;
+   public RollType requiredRoll;
    public int amt = 1;
 
 }

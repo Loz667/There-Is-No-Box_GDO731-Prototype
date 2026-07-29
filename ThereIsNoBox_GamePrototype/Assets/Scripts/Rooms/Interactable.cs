@@ -6,13 +6,15 @@ public class Interactable : MonoBehaviour, IRaycastable, IPointerEnterHandler, I
 {
     
     [SerializeField] private Material highlightMaterial;
+    [SerializeField] private Puzzle activePuzzle;
     
     private Renderer objectRenderer;
     private Material[] originalMaterials;
     private Material[] highlightedMaterials;
     
     private bool isHighlighted = false;
-
+    private bool isActive = false;
+    
     private void Awake()
     {
         objectRenderer = GetComponent<Renderer>();
@@ -27,8 +29,18 @@ public class Interactable : MonoBehaviour, IRaycastable, IPointerEnterHandler, I
     public void HandleRaycast()
     {
         Debug.Log("Clicked on object: " + this.gameObject.name);
-        UnitActionSystem.Instance.HandleSelectedAction();
-        //Game.UI.TogglePuzzleView();
+        //UnitActionSystem.Instance.HandleSelectedAction();
+        if(activePuzzle != null) {Game.UI.OpenPuzzleView(activePuzzle);}
+        else
+        {
+            Debug.Log("No puzzle selected");
+        }
+    }
+
+    public void SetActivePuzzle(Puzzle newPuzzle)
+    {
+        activePuzzle = newPuzzle;
+        isActive = true;
     }
     
     public void Highlight(bool enable)

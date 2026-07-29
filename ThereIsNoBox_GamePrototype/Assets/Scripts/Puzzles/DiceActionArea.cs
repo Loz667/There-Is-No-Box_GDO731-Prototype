@@ -17,12 +17,11 @@ public class DiceActionArea : MonoBehaviour
     [SerializeField] public Button rollButton;
     [SerializeField] private Animator buttonAnimator;
     
-    
-    
     private RollState curState = RollState.Hidden;
 
     public void SetButtonActive(bool isActive)
     {
+        discardUI.Show();
         discardUI.AllowDiscard = !isActive;
         if(isActive) buttonAnimator.SetTrigger(Normal);
         buttonAnimator.SetBool(IsActive, isActive);
@@ -31,13 +30,8 @@ public class DiceActionArea : MonoBehaviour
 
     public void SetHidden()
     {
-        curState = RollState.Hidden;
-    }
-
-    public void SetDiscardActive()
-    {
-        buttonAnimator.SetBool(IsActive, false);
-        discardUI.AllowDiscard = true;
+        discardUI.AllowDiscard = false;
+        discardUI.Hide();
     }
 
     public void ChangeState(RollState newState)

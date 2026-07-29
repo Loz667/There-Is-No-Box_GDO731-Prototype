@@ -51,14 +51,14 @@ public class DiceEnums
 
     public enum DieState
     {
-        Available,
         Added,
         Rolling,
-        Focused,
         Lost,
+        
         Used,
-        Locked,
-        Discarded 
+        XCommitted,
+        Focused,
+        Locked
     }
     
 }
