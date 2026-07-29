@@ -20,6 +20,60 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3426720
   Exists: 1
+--- !u!114 &-6677015128652083380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX-CrateHover2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/SFX-CrateHover2
+  Guid:
+    Data1: 620188309
+    Data2: 1090241661
+    Data3: 753323669
+    Data4: 1116720023
+  Banks:
+  - {fileID: -2570159834881166646}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 125
+--- !u!114 &-5981684490145347055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Ambient-ReactorRumble
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambient/Ambient-ReactorRumble
+  Guid:
+    Data1: -1186210017
+    Data2: 1202143985
+    Data3: 1652060830
+    Data4: 1715169796
+  Banks:
+  - {fileID: 827759242995204516}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 88293
 --- !u!114 &-2570159834881166646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,10 +89,10 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639201618579201197
+  lastModified: 639209312882423452
   FileSizes:
   - Name: Desktop
-    Value: 4526880
+    Value: 1968576
   Exists: 1
 --- !u!114 &-2450911597859741965
 MonoBehaviour:
@@ -82,11 +136,65 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639201618577923550
+  lastModified: 639209325624831452
   FileSizes:
   - Name: Desktop
     Value: 1074
   Exists: 1
+--- !u!114 &-985748738461322901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX-CrateHover
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/SFX-CrateHover
+  Guid:
+    Data1: -563866684
+    Data2: 1223402587
+    Data3: 1395505850
+    Data4: -1584682643
+  Banks:
+  - {fileID: -2570159834881166646}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 125
+--- !u!114 &-936105667403751367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX-DoorOpen2
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/SFX-DoorOpen2
+  Guid:
+    Data1: -1613951502
+    Data2: 1315818291
+    Data3: 1166458768
+    Data4: -426652832
+  Banks:
+  - {fileID: -2570159834881166646}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1375
 --- !u!114 &-551758609243333515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +222,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1560
+--- !u!114 &-374012220205658665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Ambient-HeaterUnit
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambient/Ambient-HeaterUnit
+  Guid:
+    Data1: 182082833
+    Data2: 1314363922
+    Data3: -1537512002
+    Data4: 1750931115
+  Banks:
+  - {fileID: 827759242995204516}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 79500
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +266,7 @@ MonoBehaviour:
   - {fileID: -1917608728381938111}
   - {fileID: -2570159834881166646}
   - {fileID: -8609681662983509976}
+  - {fileID: 827759242995204516}
   EditorEvents:
   - {fileID: 1533294950378217464}
   - {fileID: 2332057535759928725}
@@ -140,13 +276,22 @@ MonoBehaviour:
   - {fileID: 5030301273339097754}
   - {fileID: -2450911597859741965}
   - {fileID: 751713181987563428}
+  - {fileID: 1363842830711709085}
+  - {fileID: 6461614954320477960}
+  - {fileID: -936105667403751367}
+  - {fileID: 9132624352870078644}
+  - {fileID: -6677015128652083380}
+  - {fileID: -985748738461322901}
+  - {fileID: -374012220205658665}
+  - {fileID: 5659427368881921438}
+  - {fileID: -5981684490145347055}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1917608728381938111}
   StringsBanks:
   - {fileID: 6171030601845811041}
   cacheVersion: 131860
-  cacheTime: 639201618579201197
+  cacheTime: 639209348981612229
   SerializableEventsDict:
   - key: event:/Ambient/Ambient-CoolerBubbles
     index: 0
@@ -164,6 +309,24 @@ MonoBehaviour:
     index: 6
   - key: event:/SFX/UI-Accepter
     index: 7
+  - key: event:/Ambient/Ambient-AirConditioner2D
+    index: 8
+  - key: event:/SFX/SFX-DoorOpen
+    index: 9
+  - key: event:/SFX/SFX-DoorOpen2
+    index: 10
+  - key: event:/Ambient/Ambient-Clock
+    index: 11
+  - key: event:/SFX/SFX-CrateHover2
+    index: 12
+  - key: event:/SFX/SFX-CrateHover
+    index: 13
+  - key: event:/Ambient/Ambient-HeaterUnit
+    index: 14
+  - key: event:/Ambient/Ambient-HeaterUnit2D
+    index: 15
+  - key: event:/Ambient/Ambient-ReactorRumble
+    index: 16
 --- !u!114 &751713181987563428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,6 +354,53 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 744
+--- !u!114 &827759242995204516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambient.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/Ambient.bank
+  Name: Ambient
+  StudioPath: bank:/Ambient
+  lastModified: 639209348981612229
+  FileSizes:
+  - Name: Desktop
+    Value: 1734080
+  Exists: 1
+--- !u!114 &1363842830711709085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Ambient-AirConditioner2D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambient/Ambient-AirConditioner2D
+  Guid:
+    Data1: -1001965355
+    Data2: 1199534320
+    Data3: -175334750
+    Data4: -497152870
+  Banks:
+  - {fileID: -2570159834881166646}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 43988
 --- !u!114 &1533294950378217464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +509,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 166530
+--- !u!114 &5659427368881921438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Ambient-HeaterUnit2D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambient/Ambient-HeaterUnit2D
+  Guid:
+    Data1: -1518968923
+    Data2: 1121314674
+    Data3: -1563943765
+    Data4: -1779045995
+  Banks:
+  - {fileID: 827759242995204516}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 33720
 --- !u!114 &6171030601845811041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,11 +551,38 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639201618577983394
+  lastModified: 639209325624861217
   FileSizes:
   - Name: Desktop
-    Value: 1266
+    Value: 1700
   Exists: 1
+--- !u!114 &6461614954320477960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX-DoorOpen
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/SFX-DoorOpen
+  Guid:
+    Data1: -794403888
+    Data2: 1140978066
+    Data3: -1375981141
+    Data4: -1517232246
+  Banks:
+  - {fileID: -2570159834881166646}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2000
 --- !u!114 &7156613797782853850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,3 +610,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 44000
+--- !u!114 &9132624352870078644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Ambient-Clock
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambient/Ambient-Clock
+  Guid:
+    Data1: 1502244374
+    Data2: 1169046796
+    Data3: 91402647
+    Data4: 447403899
+  Banks:
+  - {fileID: 827759242995204516}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 40132
