@@ -258,97 +258,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &84094415
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 84094417}
-  - component: {fileID: 84094416}
-  m_Layer: 0
-  m_Name: Sign_Stop (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &84094416
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84094415}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 8e8ea02fe4dc824418e354d51d186cf4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
---- !u!4 &84094417
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84094415}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.000000014901159, z: -0, w: 1}
-  m_LocalPosition: {x: 98.75, y: 1.7670335, z: 104.96}
-  m_LocalScale: {x: 0.14884529, y: 0.14884529, z: 0.14884529}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &191969919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -434,6 +343,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5610419606178140054, guid: c74167ace1b6e08409aeed02a14b4ab5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 718081323}
+    - targetCorrespondingSourceObject: {fileID: 2140031411151458295, guid: c74167ace1b6e08409aeed02a14b4ab5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1329769862}
   m_SourcePrefab: {fileID: 100100000, guid: c74167ace1b6e08409aeed02a14b4ab5, type: 3}
 --- !u!4 &191969920 stripped
 Transform:
@@ -897,11 +809,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 620188309
-      Data2: 1090241661
-      Data3: 753323669
-      Data4: 1116720023
-    Path: event:/SFX/SFX-CrateHover2
+      Data1: -1438596322
+      Data2: 1091247277
+      Data3: 1313277105
+      Data4: 794536887
+    Path: event:/SFX/SFX-CrateHover3
   Event: 
   EventPlayTrigger: 13
   EventStopTrigger: 0
@@ -1219,13 +1131,44 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -563866684
-      Data2: 1223402587
-      Data3: 1395505850
-      Data4: -1584682643
-    Path: event:/SFX/SFX-CrateHover
+      Data1: -1438596322
+      Data2: 1091247277
+      Data3: 1313277105
+      Data4: 794536887
+    Path: event:/SFX/SFX-CrateHover3
   Event: 
   EventPlayTrigger: 13
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &391816345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391816329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1598733863
+      Data2: 1130201282
+      Data3: 1190612408
+      Data4: -1963569556
+    Path: event:/SFX/SFX-PuzzleUp
+  Event: 
+  EventPlayTrigger: 15
   EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 0
@@ -1926,11 +1869,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 620188309
-      Data2: 1090241661
-      Data3: 753323669
-      Data4: 1116720023
-    Path: event:/SFX/SFX-CrateHover2
+      Data1: -1438596322
+      Data2: 1091247277
+      Data3: 1313277105
+      Data4: 794536887
+    Path: event:/SFX/SFX-CrateHover3
   Event: 
   EventPlayTrigger: 13
   EventStopTrigger: 0
@@ -2771,11 +2714,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 620188309
-      Data2: 1090241661
-      Data3: 753323669
-      Data4: 1116720023
-    Path: event:/SFX/SFX-CrateHover2
+      Data1: -1438596322
+      Data2: 1091247277
+      Data3: 1313277105
+      Data4: 794536887
+    Path: event:/SFX/SFX-CrateHover3
   Event: 
   EventPlayTrigger: 13
   EventStopTrigger: 0
@@ -3239,11 +3182,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -563866684
-      Data2: 1223402587
-      Data3: 1395505850
-      Data4: -1584682643
-    Path: event:/SFX/SFX-CrateHover
+      Data1: -1438596322
+      Data2: 1091247277
+      Data3: 1313277105
+      Data4: 794536887
+    Path: event:/SFX/SFX-CrateHover3
   Event: 
   EventPlayTrigger: 13
   EventStopTrigger: 0
@@ -3700,6 +3643,97 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 127f3cc8ef9d34848bd68d95881f7fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!1 &1098820526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1098820527}
+  - component: {fileID: 1098820528}
+  m_Layer: 0
+  m_Name: danger_radiation_sign_transparent_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1098820527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098820526}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.253, y: 1.776, z: 4.961}
+  m_LocalScale: {x: 0.1110194, y: 0.1110194, z: 0.1110194}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1005664629}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1098820528
+SpriteRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098820526}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_Sprite: {fileID: -1354618028, guid: ffdb2035eb5065647ba243728e387d7f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 6, y: 6}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_SpriteSortPoint: 0
 --- !u!1001 &1146581618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4698,97 +4732,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 127f3cc8ef9d34848bd68d95881f7fc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
---- !u!1 &1288255208
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1288255210}
-  - component: {fileID: 1288255209}
-  m_Layer: 0
-  m_Name: Sign_Stop (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1288255209
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288255208}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 8e8ea02fe4dc824418e354d51d186cf4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
---- !u!4 &1288255210
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288255208}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 103.693, y: 1.7670335, z: 99.97}
-  m_LocalScale: {x: 0.14884529, y: 0.14884529, z: 0.14884529}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1313525652 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3782363683680461154, guid: 7626aea4b01443649ad3042010c30c09, type: 3}
@@ -4809,11 +4752,47 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -563866684
-      Data2: 1223402587
-      Data3: 1395505850
-      Data4: -1584682643
-    Path: event:/SFX/SFX-CrateHover
+      Data1: -1438596322
+      Data2: 1091247277
+      Data3: 1313277105
+      Data4: 794536887
+    Path: event:/SFX/SFX-CrateHover3
+  Event: 
+  EventPlayTrigger: 13
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!1 &1329769857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2140031411151458295, guid: c74167ace1b6e08409aeed02a14b4ab5, type: 3}
+  m_PrefabInstance: {fileID: 191969919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1329769862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329769857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1438596322
+      Data2: 1091247277
+      Data3: 1313277105
+      Data4: 794536887
+    Path: event:/SFX/SFX-CrateHover3
   Event: 
   EventPlayTrigger: 13
   EventStopTrigger: 0
@@ -6171,6 +6150,42 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!1 &1699671250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1673306718950508317, guid: 71463e65af16e6b488472f5d044bee75, type: 3}
+  m_PrefabInstance: {fileID: 6973389916963960046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1699671255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699671250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1459759167
+      Data2: 1222411641
+      Data3: -753792344
+      Data4: 1340473257
+    Path: event:/Ambient/Ambient-Drips
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &1733292768 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5041562615173356674, guid: 71463e65af16e6b488472f5d044bee75, type: 3}
@@ -6251,11 +6266,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 620188309
-      Data2: 1090241661
-      Data3: 753323669
-      Data4: 1116720023
-    Path: event:/SFX/SFX-CrateHover2
+      Data1: -1438596322
+      Data2: 1091247277
+      Data3: 1313277105
+      Data4: 794536887
+    Path: event:/SFX/SFX-CrateHover3
   Event: 
   EventPlayTrigger: 13
   EventStopTrigger: 0
@@ -6376,11 +6391,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -563866684
-      Data2: 1223402587
-      Data3: 1395505850
-      Data4: -1584682643
-    Path: event:/SFX/SFX-CrateHover
+      Data1: -1438596322
+      Data2: 1091247277
+      Data3: 1313277105
+      Data4: 794536887
+    Path: event:/SFX/SFX-CrateHover3
   Event: 
   EventPlayTrigger: 13
   EventStopTrigger: 0
@@ -6606,11 +6621,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 620188309
-      Data2: 1090241661
-      Data3: 753323669
-      Data4: 1116720023
-    Path: event:/SFX/SFX-CrateHover2
+      Data1: -1438596322
+      Data2: 1091247277
+      Data3: 1313277105
+      Data4: 794536887
+    Path: event:/SFX/SFX-CrateHover3
   Event: 
   EventPlayTrigger: 13
   EventStopTrigger: 0
@@ -7365,7 +7380,10 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 269bd87b24515cf408263607e1924a35, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1219807282227090277, guid: 7626aea4b01443649ad3042010c30c09, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1098820527}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8524278909860704431, guid: 7626aea4b01443649ad3042010c30c09, type: 3}
       insertIndex: -1
@@ -7376,6 +7394,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1678141932146836644, guid: 7626aea4b01443649ad3042010c30c09, type: 3}
       insertIndex: -1
       addedObject: {fileID: 391816337}
+    - targetCorrespondingSourceObject: {fileID: 1678141932146836644, guid: 7626aea4b01443649ad3042010c30c09, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 391816345}
     - targetCorrespondingSourceObject: {fileID: 3782363683680461154, guid: 7626aea4b01443649ad3042010c30c09, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1313525658}
@@ -7472,6 +7493,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7917006020912426174, guid: 71463e65af16e6b488472f5d044bee75, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2023134554}
+    - targetCorrespondingSourceObject: {fileID: 1673306718950508317, guid: 71463e65af16e6b488472f5d044bee75, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1699671255}
     - targetCorrespondingSourceObject: {fileID: 7712437281654020510, guid: 71463e65af16e6b488472f5d044bee75, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1902970599}
@@ -7496,5 +7520,3 @@ SceneRoots:
   - {fileID: 568163572}
   - {fileID: 1400948723}
   - {fileID: 1204049353}
-  - {fileID: 1288255210}
-  - {fileID: 84094417}

@@ -74,6 +74,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 88293
+--- !u!114 &-5589890642656854430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX-CrateHover3
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/SFX-CrateHover3
+  Guid:
+    Data1: -1438596322
+    Data2: 1091247277
+    Data3: 1313277105
+    Data4: 794536887
+  Banks:
+  - {fileID: -2570159834881166646}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 187
 --- !u!114 &-2570159834881166646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,10 +116,10 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639209387984814510
+  lastModified: 639209480335980335
   FileSizes:
   - Name: Desktop
-    Value: 3170592
+    Value: 3362432
   Exists: 1
 --- !u!114 &-2450911597859741965
 MonoBehaviour:
@@ -136,7 +163,7 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639209366694174898
+  lastModified: 639209482854988190
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -195,6 +222,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1375
+--- !u!114 &-646400943542321033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/SFX-PuzzleUp
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFX/SFX-PuzzleUp
+  Guid:
+    Data1: 1598733863
+    Data2: 1130201282
+    Data3: 1190612408
+    Data4: -1963569556
+  Banks:
+  - {fileID: -2570159834881166646}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 562
 --- !u!114 &-551758609243333515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,13 +340,16 @@ MonoBehaviour:
   - {fileID: 5659427368881921438}
   - {fileID: -5981684490145347055}
   - {fileID: 850856089925639992}
+  - {fileID: -646400943542321033}
+  - {fileID: -5589890642656854430}
+  - {fileID: 4014376495714088614}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1917608728381938111}
   StringsBanks:
   - {fileID: 6171030601845811041}
   cacheVersion: 131860
-  cacheTime: 639209387984814510
+  cacheTime: 639209483931391671
   SerializableEventsDict:
   - key: event:/Ambient/Ambient-CoolerBubbles
     index: 0
@@ -330,6 +387,12 @@ MonoBehaviour:
     index: 16
   - key: event:/SFX/SFX-CreatureMonitor
     index: 17
+  - key: event:/SFX/SFX-PuzzleUp
+    index: 18
+  - key: event:/SFX/SFX-CrateHover3
+    index: 19
+  - key: event:/Ambient/Ambient-Drips
+    index: 20
 --- !u!114 &751713181987563428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,10 +435,10 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/Ambient.bank
   Name: Ambient
   StudioPath: bank:/Ambient
-  lastModified: 639209356994641133
+  lastModified: 639209483931391671
   FileSizes:
   - Name: Desktop
-    Value: 2157920
+    Value: 2624768
   Exists: 1
 --- !u!114 &850856089925639992
 MonoBehaviour:
@@ -512,6 +575,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 87823
+--- !u!114 &4014376495714088614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Ambient-Drips
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambient/Ambient-Drips
+  Guid:
+    Data1: 1459759167
+    Data2: 1222411641
+    Data3: -753792344
+    Data4: 1340473257
+  Banks:
+  - {fileID: 827759242995204516}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 32914
 --- !u!114 &5030301273339097754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,10 +671,10 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639209366694200122
+  lastModified: 639209482855008139
   FileSizes:
   - Name: Desktop
-    Value: 1756
+    Value: 1864
   Exists: 1
 --- !u!114 &6461614954320477960
 MonoBehaviour:
