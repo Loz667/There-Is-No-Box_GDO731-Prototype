@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f9b36042-ff5a-43f5-a8c3-bfba2d43307f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ThereIsNoBox_GamePrototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThereIsNoBox_GamePrototype/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/TaskView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/TaskView.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rooms/Room.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rooms/Room.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rooms/StorageRoom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rooms/StorageRoom.prefab" afterDir="false" />
@@ -17,6 +18,8 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rooms/Interactable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rooms/Interactable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PuzzleUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PuzzleUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnitController.cs" afterDir="false" />
+=======
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +150,11 @@
       <workItem from="1783333331663" duration="12929000" />
       <workItem from="1783435181581" duration="39364000" />
       <workItem from="1784190872942" duration="6219000" />
+<<<<<<< Updated upstream
       <workItem from="1784199231726" duration="31701000" />
+=======
+      <workItem from="1784199231726" duration="47197000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
