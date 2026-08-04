@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aebb994af4c589b4b991702dc7dc2b9b, type: 3}
+  m_Name: HardPuzzle
+  m_EditorClassIdentifier: Assembly-CSharp::Puzzle
+  name: Hard Puzzle
+  description: 
+  tasks:
+  - requiredGlyphs:
+    - requiredRoll: {fileID: 11400000, guid: 7e019419f72b53e49ac56abe15b980bd, type: 2}
+      amt: 0
+    - requiredRoll: {fileID: 11400000, guid: 7e019419f72b53e49ac56abe15b980bd, type: 2}
+      amt: 0
+  - requiredGlyphs:
+    - requiredRoll: {fileID: 11400000, guid: f06cb43be447cfd4bbbd7dde9086f1d4, type: 2}
+      amt: 0
+    - requiredRoll: {fileID: 11400000, guid: f06cb43be447cfd4bbbd7dde9086f1d4, type: 2}
+      amt: 0
+  - requiredGlyphs:
+    - requiredRoll: {fileID: 11400000, guid: 1424e1f5a4161c84d8dd092e98530b43, type: 2}
+      amt: 0
+  rewards: []
+  failures: []
+  allowedDice: []
