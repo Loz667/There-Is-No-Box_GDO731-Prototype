@@ -6,9 +6,10 @@ public class DiceEnums
     {
         EMPTY,
         BLANK,
-        SCREW1,
-        SCREW2,
-        SCREW3,
+        SCREWDRIVER,
+        GEAR1,
+        GEAR2,
+        GEAR3,
         SPANNER,
         HAMMER,
         CROWBAR,
@@ -30,7 +31,8 @@ public class DiceEnums
     public enum RollType
     {
         NONE,
-        SCREW,
+        GEAR,
+        SCREWDRIVER,
         SPANNER,
         HAMMER,
         CROWBAR,
