@@ -93,8 +93,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 1b1f8a1ee52f53b458138cd44789e6a2, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 2e38d837aa2a39b4c9bea423767f38b5, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -897,7 +897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &410087040
 Light:
   m_ObjectHideFlags: 0
@@ -4081,6 +4081,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1425861031389594839, guid: f7b35e73b100bbc4187ef28d7c746213, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793791477742255400, guid: f7b35e73b100bbc4187ef28d7c746213, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2199683490568704583, guid: f7b35e73b100bbc4187ef28d7c746213, type: 3}
