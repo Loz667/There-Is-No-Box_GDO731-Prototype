@@ -1,15 +1,23 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DicePoolSlotUI : MonoBehaviour
+public class DicePoolSlotUI : UIPanel
 {
 
     [SerializeField] private Image slotBg;
-    //[SerializeField] private Image faceIcon;
-    //[SerializeField] private Sprite emptySlot;
     [SerializeField] private DieFaceUI dieFace;
-   
-    
+    private bool isActive = true;
+    public bool IsActive
+    {
+        get => isActive;
+        set
+        {
+            isActive = value;
+            if (isActive) Show();
+            else Hide();
+        }
+    }
+
     private int index;
     private Die die;
     
@@ -37,6 +45,15 @@ public class DicePoolSlotUI : MonoBehaviour
 
     public void UpdateFace()
     {
+        if(!isActive) return;
+        if (die == null)
+        {
+            IsActive = false;
+            return;
+        }
+        Debug.Log("UpdateFace: " + die.rollIcon);
+        Debug.Log("UpdateFace: " + die.State);
+        
         if (die.rollIcon != null && die.State == DiceEnums.DieState.Rolling)
         {
             dieFace.SetDieFace(die.rollIcon);

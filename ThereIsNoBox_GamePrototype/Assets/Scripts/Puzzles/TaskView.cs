@@ -39,13 +39,15 @@ public class TaskView : MonoBehaviour, IDropTarget
     //private const float fullCoverHeight = 492f;
     //private const float openCoverHeight = 30f;
     private const float closedCover = 0f;
-    private const float openCover = 450f;
+    private const float openCover = 550f;
     
     private TaskState state = TaskState.InActive;
     public bool IsActive => state == TaskState.Active;
 
     public void LoadTask(TaskData newTask, PuzzleUI controller)
     {
+        Debug.Log("LoadTasks: " + requiredTypes);
+        Debug.Log("LoadTasks: " + CommittedDice);
         requiredTypes.Clear();
         CommittedDice.Clear();
         

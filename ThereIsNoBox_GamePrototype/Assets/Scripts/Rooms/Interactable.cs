@@ -23,6 +23,7 @@ public class Interactable : MonoBehaviour, IRaycastable, IPointerEnterHandler, I
         List<Material> materials = new List<Material>(originalMaterials);
         materials.Add(highlightMaterial);
         highlightedMaterials = materials.ToArray();
+        Highlight(true);
         
     }
     

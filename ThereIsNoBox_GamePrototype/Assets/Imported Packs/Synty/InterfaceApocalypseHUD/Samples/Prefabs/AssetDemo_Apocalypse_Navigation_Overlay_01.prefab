@@ -35,7 +35,6 @@ RectTransform:
   - {fileID: 8228828668758326616}
   - {fileID: 8856829622829145634}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -97,6 +96,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1131545589775040802}
     m_Modifications:
     - target: {fileID: 1708147373514918554, guid: 0470715bdb6f1554796bf0eb73a12c07, type: 3}
@@ -200,6 +200,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0470715bdb6f1554796bf0eb73a12c07, type: 3}
 --- !u!224 &8856829622829145634 stripped
 RectTransform:
@@ -211,6 +214,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1131545589775040802}
     m_Modifications:
     - target: {fileID: 199481510045061537, guid: 14549b7fb3fa94d338edc4897fe917a6, type: 3}
@@ -446,6 +450,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14549b7fb3fa94d338edc4897fe917a6, type: 3}
 --- !u!224 &8866212339722539204 stripped
 RectTransform:
@@ -457,6 +464,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1131545589775040802}
     m_Modifications:
     - target: {fileID: 165419725799739068, guid: c370568011aa10e4dacab0e15e17377e, type: 3}
@@ -548,6 +556,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c370568011aa10e4dacab0e15e17377e, type: 3}
 --- !u!95 &1978752901687808812 stripped
 Animator:
@@ -564,6 +575,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1131545589775040802}
     m_Modifications:
     - target: {fileID: 75972828552685741, guid: b60fb7d600a39406ab7a9872be88326a, type: 3}
@@ -927,10 +939,13 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9108120633574022326, guid: b60fb7d600a39406ab7a9872be88326a, type: 3}
-      propertyPath: _sceneNames.Array.data[0]
+      propertyPath: '_sceneNames.Array.data[0]'
       value: 00_Demo_Apocalypse_Title
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b60fb7d600a39406ab7a9872be88326a, type: 3}
 --- !u!224 &8228828668758326616 stripped
 RectTransform:

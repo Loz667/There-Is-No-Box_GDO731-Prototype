@@ -16,9 +16,9 @@ MonoBehaviour:
   description: This is a test, designed to provoke an emotional response
   tasks:
   - requiredGlyphs:
-    - requiredRoll: {fileID: 11400000, guid: f06cb43be447cfd4bbbd7dde9086f1d4, type: 2}
+    - requiredRoll: {fileID: 11400000, guid: ff93b985025b61840aceb5f310a35817, type: 2}
       amt: 3
-    - requiredRoll: {fileID: 11400000, guid: f06cb43be447cfd4bbbd7dde9086f1d4, type: 2}
+    - requiredRoll: {fileID: 11400000, guid: ff93b985025b61840aceb5f310a35817, type: 2}
       amt: 2
   - requiredGlyphs:
     - requiredRoll: {fileID: 11400000, guid: 7e019419f72b53e49ac56abe15b980bd, type: 2}

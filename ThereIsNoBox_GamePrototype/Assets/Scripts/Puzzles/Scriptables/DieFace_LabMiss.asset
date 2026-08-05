@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4014c49b65401cb4c919a3a3332444ce, type: 3}
-  m_Name: DieFace_Screw
+  m_Name: DieFace_LabMiss
   m_EditorClassIdentifier: Assembly-CSharp::DieFace
-  rollType: 1
-  rollResult: 2
-  image: {fileID: 21300000, guid: 4620ed4848309404382b6c4fcb153684, type: 3}
-  label: Screwdriver
-  value: 1
+  rollType: 8
+  rollResult: 11
+  image: {fileID: 21300000, guid: a20d23d0fddf37f4593bc8f7a479831d, type: 3}
+  label: 
+  value: 0
