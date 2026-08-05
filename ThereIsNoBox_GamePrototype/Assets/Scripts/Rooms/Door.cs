@@ -1,7 +1,5 @@
 using System.Threading.Tasks;
 using UnityEngine;
-using Unity.Cinemachine;
-using UnityEngine;
 using UnityEngine.AI;
 
 public class Door : MonoBehaviour, IRaycastable
@@ -9,12 +7,18 @@ public class Door : MonoBehaviour, IRaycastable
     public RoomManager originRoom;
     public RoomManager targetRoom;    
 
-    public void HandleRaycast()
+    public async void HandleRaycast()
     {
-        DoRoomTransition();
+        Debug.Log("Door HandleRaycast ASYNC");
+        bool confirmMove = await PuzzleDemo.Instance.GoToNextRoomAsync();
+        
+        if (confirmMove)
+        {
+            await DoRoomTransition();
+        }
     }
 
-    private async void DoRoomTransition()
+    private async Task DoRoomTransition()
     {
         await ScreenFader.Instance.FadeOut();
         originRoom.SetActiveRoomCamera(false);

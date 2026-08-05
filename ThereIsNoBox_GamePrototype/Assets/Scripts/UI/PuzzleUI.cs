@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -204,16 +205,27 @@ public class PuzzleUI : UIPanel
         return true;
     }
     
-    private void WinPuzzle()
+    private async void WinPuzzle()
     {
-        Debug.Log("Win puzzle!");
-        PuzzleDemo.Instance.Win();
+        //Debug.Log("Win puzzle!");
+        await PuzzleDemo.Instance.WinAsync();
+        Game.UI.ClosePuzzleView();
     }
     
-    private void LosePuzzle()
+    private async void LosePuzzle()
     {
-        Debug.Log("Lose puzzle!");
-        PuzzleDemo.Instance.Lose();
+        //Debug.Log("Lose puzzle!");
+        await PuzzleDemo.Instance.LoseAsync();
+        
+        Game.UI.ClosePuzzleView();
+        
+        if (ScreenFader.Instance != null)
+        {
+            await ScreenFader.Instance.FadeOut();
+            await Task.Delay(100);
+            await ScreenFader.Instance.FadeIn();
+        }
+        
     }
     
     //TEST CODE

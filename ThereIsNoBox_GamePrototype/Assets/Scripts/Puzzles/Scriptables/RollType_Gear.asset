@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RollType_Gear
   m_EditorClassIdentifier: Assembly-CSharp::RollType
   rollType: 1
-  rollIcon: {fileID: 0}
-  targetIcon: {fileID: 0}
+  rollIcon: {fileID: 21300000, guid: 8634d89ad9472d146bf477c8f2e2c3f0, type: 3}
+  targetIcon: {fileID: 21300000, guid: 61cfc28d6791ebd4eb77d1054a53ef59, type: 3}

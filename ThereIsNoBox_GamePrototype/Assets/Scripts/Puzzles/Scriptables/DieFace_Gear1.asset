@@ -16,4 +16,4 @@ MonoBehaviour:
   rollResult: 3
   image: {fileID: 21300000, guid: 8634d89ad9472d146bf477c8f2e2c3f0, type: 3}
   label: 
-  value: 0
+  value: 1

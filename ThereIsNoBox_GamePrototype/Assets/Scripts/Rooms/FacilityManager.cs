@@ -74,6 +74,15 @@ public class FacilityManager : MonoBehaviour
     //public async void MoveToRoom(Vector2Int nextRoomDirection)
     public async void MoveToRoom(RoomManager.CardinalPoint direction)
     {
+        
+        bool confirmMove = await PuzzleDemo.Instance.GoToNextRoomAsync();
+
+        if (!confirmMove)
+        {
+            Debug.Log("Room transition canceled by player.");
+            return;
+        }
+        
         //TODO Manage active room - needs to be which ever room the active character is in
         Vector2Int nextRoomDirection = RoomManager.NextRoomVector(direction); 
         

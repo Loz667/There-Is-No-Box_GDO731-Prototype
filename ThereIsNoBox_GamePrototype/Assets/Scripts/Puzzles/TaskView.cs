@@ -46,6 +46,8 @@ public class TaskView : MonoBehaviour, IDropTarget
 
     public void LoadTask(TaskData newTask, PuzzleUI controller)
     {
+        Debug.Log("LoadTasks: " + requiredTypes);
+        Debug.Log("LoadTasks: " + CommittedDice);
         requiredTypes.Clear();
         CommittedDice.Clear();
         
