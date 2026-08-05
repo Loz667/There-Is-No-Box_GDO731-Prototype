@@ -6,18 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="f9b36042-ff5a-43f5-a8c3-bfba2d43307f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ThereIsNoBox_GamePrototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThereIsNoBox_GamePrototype/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Imported Packs/Synty/InterfaceApocalypseHUD/Samples/Prefabs/AssetDemo_Apocalypse_Navigation_Overlay_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imported Packs/Synty/InterfaceApocalypseHUD/Samples/Prefabs/AssetDemo_Apocalypse_Navigation_Overlay_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/TrackerLight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/TrackerLight.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rooms/SecurityRoom.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rooms/SecurityRoom.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/LabPuzzle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/LabPuzzle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/LabPuzzleHUD.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/LabPuzzleHUD.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/PuzzleElements/ContainerParent.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/PuzzleElements/ContainerParent.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/DemoTestLevel_TH.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DemoTestLevel_TH.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LabPuzzle.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LabPuzzle.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/LabPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/LabPuzzle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleDemo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleDemo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Scriptables/DemoPuzzle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Scriptables/DemoPuzzle.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Scriptables/DieFace_Gear1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Scriptables/DieFace_Gear1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Scriptables/DieFace_Gear2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Scriptables/DieFace_Gear2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Scriptables/HardPuzzle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Scriptables/HardPuzzle.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Scriptables/RollType_Gear.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Scriptables/RollType_Gear.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Scriptables/StandardDie.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Scriptables/StandardDie.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TaskView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/TaskView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rooms/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rooms/Door.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rooms/FacilityManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rooms/FacilityManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PuzzleUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PuzzleUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Scriptables/DieFace_LabHit.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Scriptables/DieFace_LabHit.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Scriptables/DieFace_LabMiss.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Scriptables/DieFace_LabMiss.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +153,8 @@
       <workItem from="1785427362659" duration="1665000" />
       <workItem from="1785837676378" duration="2119000" />
       <workItem from="1785866162787" duration="3631000" />
+      <workItem from="1785924483168" duration="1150000" />
+      <workItem from="1785925664921" duration="5884000" />
     </task>
     <servers />
   </component>

@@ -68,7 +68,21 @@ public class PuzzleDemo : UIPanel
         rewardContent.SetActive(false);
         background.color = colorLoss;
         _headerText.text = "FAILED";
-        _messageText.text = "You failed the puzzle. When it all collapses down around your ears and the world comes to a screaming halt, you're the one they'll blame.";
+        _messageText.text = "Your inadequate peformance has attracted the attention of the HR Manager. Lose 1 morale.";
+        
+        Show();
+        _dialogResultSource = new TaskCompletionSource<bool>();
+        return _dialogResultSource.Task;
+    }
+    
+    public Task<bool> LoseLabAsync()
+    {
+        _buttonCancel.gameObject.SetActive(false);
+        textContent.SetActive(true);
+        rewardContent.SetActive(false);
+        background.color = colorLoss;
+        _headerText.text = "FAILED";
+        _messageText.text = "Compound volatility level exceeded. All progress has been lost.";
         
         Show();
         _dialogResultSource = new TaskCompletionSource<bool>();

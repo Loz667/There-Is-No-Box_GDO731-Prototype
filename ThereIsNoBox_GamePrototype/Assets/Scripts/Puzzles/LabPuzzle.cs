@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -13,7 +14,8 @@ public class LabPuzzle : UIPanel
     private int volatilityCount = 1;
     [SerializeField] private DieDefinition dieDef;
     [SerializeField] private int availableDice = 3;
-
+    
+    [SerializeField] private VolatilityTracker tracker;
     [SerializeField] private DicePoolManager dicePool;
     [SerializeField] private DicePoolUI dicePoolUI;
     [SerializeField] private Slider containerLevel;
@@ -23,12 +25,13 @@ public class LabPuzzle : UIPanel
 
     void Start()
     {
-        Show();
+        //Show();
     }
     public override void Show()
     {
         containerLevel.value = GetProgress();
         volatilityCount = 1;
+        tracker.init();
         resultText.text = "";
         volatilityDie.text = "";
         rollButton.onClick.AddListener(RollDice);
@@ -73,8 +76,8 @@ public class LabPuzzle : UIPanel
         int hitCount = GetDiceResults();
         string resultUpdate; 
         
-        Debug.Log("Volatile Roll: " +  volatileRoll);
-        Debug.Log("Hit Count: " + hitCount);
+        //Debug.Log("Volatile Roll: " +  volatileRoll);
+        //Debug.Log("Hit Count: " + hitCount);
         
         //Update UI
         volatilityDie.text = volatileRoll.ToString();
@@ -102,17 +105,24 @@ public class LabPuzzle : UIPanel
 
     }
 
-   
-
-    private void FailPuzzle()
+    private async void FailPuzzle()
     {
-        Debug.Log("Volatile roll failed");
+        await PuzzleDemo.Instance.LoseLabAsync();
+        
+        Game.UI.CloseLabPuzzle();
+        
+        if (ScreenFader.Instance != null)
+        {
+            await ScreenFader.Instance.FadeOut();
+            await Task.Delay(100);
+            await ScreenFader.Instance.FadeIn();
+        }
     }
 
     private int GetDiceResults()
     {
         int hits = 0;
-        Debug.Log($"GetDiceResults: Hits: {hits}");
+        //Debug.Log($"GetDiceResults: Hits: {hits}");
         dicePool.TempRollDice();
         dicePoolUI.UpdateSlots();
         List<Die> rolledDice = dicePool.AllDice;
@@ -123,20 +133,15 @@ public class LabPuzzle : UIPanel
         {
             if (die.RollResult == DiceEnums.DieResult.HIT)
             {
-                Debug.Log($"GetDiceResults: Rolled a hit");
+                //Debug.Log($"GetDiceResults: Rolled a hit");
                 hits++;
             }
             else
             {
-                Debug.Log($"GetDiceResults: MISS");
+                //Debug.Log($"GetDiceResults: MISS");
             }
         }
-        
-        Debug.Log($"GetDiceResults: Hits post-roll: {hits}");
-        //int rtn = Random.Range(0, 11);
-        
         return hits;
-
     }
 
     private int GetVolatilityRoll() => Random.Range(1, 9);
@@ -144,9 +149,8 @@ public class LabPuzzle : UIPanel
     private void UpdateVolatility()
     {
         volatilityCount++;
-        //Update UI
+        tracker.TrackerUpdate(volatilityCount); //Update UI
     }
     
     private float GetProgress() => (progress == 0) ? 0f : progress/target;
-    
 }

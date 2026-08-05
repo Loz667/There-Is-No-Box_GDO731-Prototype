@@ -5,7 +5,7 @@ using UnityEngine;
         public PlayerHUD playerHUD;
         public MapView mapView;
         public PuzzleUI puzzleUI;
-       
+        public LabPuzzle labPuzzle;
         
         
         private UIPanel currentPanel;
@@ -63,6 +63,18 @@ using UnityEngine;
         public void ClosePuzzleView()
         {
             puzzleUI.Hide();
+            playerHUD.Show();
+        }
+
+        public void OpenLabPuzzle()
+        {
+            playerHUD.Hide();
+            labPuzzle.Show();
+        }
+
+        public void CloseLabPuzzle()
+        {
+            labPuzzle.Hide();
             playerHUD.Show();
         }
         

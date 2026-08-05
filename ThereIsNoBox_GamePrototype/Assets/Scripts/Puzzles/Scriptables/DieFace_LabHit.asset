@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4014c49b65401cb4c919a3a3332444ce, type: 3}
   m_Name: DieFace_LabHit
   m_EditorClassIdentifier: Assembly-CSharp::DieFace
-  rollType: 5
-  rollResult: 8
+  rollType: 6
+  rollResult: 9
   image: {fileID: 21300000, guid: cfcc959bcb606a446b94048712570f97, type: 3}
   label: 
   value: 0
