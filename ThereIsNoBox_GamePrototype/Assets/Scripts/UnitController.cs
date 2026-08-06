@@ -22,8 +22,7 @@ public class UnitController : MonoBehaviour
     {
         if (InputHandler.Controls.Player.Test.triggered)
         {
-            Debug.Log("Test key pressed");
-            //Game.UI.TogglePuzzleView();
+            Game.UI.ToggleMapView2();
         }
         
         //if (InputHandler.Controls.Player.Target.triggered)
