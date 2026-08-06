@@ -4,6 +4,7 @@ using UnityEngine;
     {
         public PlayerHUD playerHUD;
         public MapView mapView;
+        public MapView mapView2;
         public PuzzleUI puzzleUI;
         public LabPuzzle labPuzzle;
         
@@ -18,7 +19,9 @@ using UnityEngine;
         {
             playerHUD.Show();
             mapView.Hide();
+            mapView2.Hide();
             puzzleUI.Hide();
+            labPuzzle.Hide();
             currentPanel = playerHUD;
         }
         
@@ -90,6 +93,20 @@ using UnityEngine;
             {
                 playerHUD.Hide();
                 mapView.Show();
+            }
+        }
+        
+        public void ToggleMapView2()
+        {
+            if (mapView2.IsOpen)
+            {
+                mapView2.Hide();
+                playerHUD.Show();
+            }
+            else
+            {
+                playerHUD.Hide();
+                mapView2.Show();
             }
         }
         
