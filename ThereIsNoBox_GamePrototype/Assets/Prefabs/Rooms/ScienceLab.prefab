@@ -1347,6 +1347,7 @@ GameObject:
   - component: {fileID: 6294328593343541735}
   - component: {fileID: 4469469880005673877}
   - component: {fileID: 7844965366455919194}
+  - component: {fileID: 952066586463245238}
   m_Layer: 0
   m_Name: SlidingDoor (1)
   m_TagString: Untagged
@@ -1448,6 +1449,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020158548, y: 0.00077405915, z: 0.02110412}
   m_Center: {x: -4.656613e-10, y: -0.00007040067, z: 0.010552062}
+--- !u!114 &952066586463245238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2734406182921848200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68cd57c6749a41099e78f1143f466396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Doorway
+  direction: 2
 --- !u!1 &2804629687761786688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,6 +1601,7 @@ GameObject:
   - component: {fileID: 8850160520759104030}
   - component: {fileID: 9073311295696266200}
   - component: {fileID: 7353048421733523689}
+  - component: {fileID: 4417385832485378294}
   m_Layer: 0
   m_Name: SlidingDoor (3)
   m_TagString: Untagged
@@ -1688,6 +1703,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020158548, y: 0.00077405915, z: 0.02110412}
   m_Center: {x: -4.656613e-10, y: -0.00007040067, z: 0.010552062}
+--- !u!114 &4417385832485378294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2957653685710870216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68cd57c6749a41099e78f1143f466396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Doorway
+  direction: 3
 --- !u!1 &2962122151555312425
 GameObject:
   m_ObjectHideFlags: 0
@@ -2600,6 +2628,7 @@ GameObject:
   - component: {fileID: 2198339671818137209}
   - component: {fileID: 5728034393008601388}
   - component: {fileID: 1612614369663627562}
+  - component: {fileID: 7943974710575053780}
   m_Layer: 0
   m_Name: SlidingDoor
   m_TagString: Untagged
@@ -2701,6 +2730,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020158548, y: 0.00077405915, z: 0.02110412}
   m_Center: {x: -4.656613e-10, y: -0.00007040067, z: 0.010552062}
+--- !u!114 &7943974710575053780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3596536521479196574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68cd57c6749a41099e78f1143f466396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Doorway
+  direction: 1
 --- !u!1 &4124697350075957586
 GameObject:
   m_ObjectHideFlags: 0
@@ -3385,6 +3427,7 @@ GameObject:
   - component: {fileID: 4941651518911463729}
   - component: {fileID: 6934208031361867502}
   - component: {fileID: 5593502571356436799}
+  - component: {fileID: 4327420003184021118}
   m_Layer: 0
   m_Name: SlidingDoor (2)
   m_TagString: Untagged
@@ -3486,6 +3529,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020158548, y: 0.00077405915, z: 0.02110412}
   m_Center: {x: -4.656613e-10, y: -0.00007040067, z: 0.010552062}
+--- !u!114 &4327420003184021118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5633693819952495744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68cd57c6749a41099e78f1143f466396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Doorway
+  direction: 4
 --- !u!1 &5674379866006470479
 GameObject:
   m_ObjectHideFlags: 0
@@ -6564,23 +6620,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2829743329537193829, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.53
+      value: 1.66
       objectReference: {fileID: 0}
     - target: {fileID: 2829743329537193829, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.725
+      value: -2.15
       objectReference: {fileID: 0}
     - target: {fileID: 3042553621078967003, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.73
+      value: -2.46
       objectReference: {fileID: 0}
     - target: {fileID: 3042553621078967003, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.704
+      value: -2.08
       objectReference: {fileID: 0}
     - target: {fileID: 3559033225272117678, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.643
+      value: 1.43
       objectReference: {fileID: 0}
     - target: {fileID: 3559033225272117678, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6605,7 +6661,7 @@ PrefabInstance:
     - target: {fileID: 7589334141702404145, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: eastExit.doorObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2734406182921848200}
     - target: {fileID: 7589334141702404145, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: eastExit.wallObject
       value: 
@@ -6613,15 +6669,15 @@ PrefabInstance:
     - target: {fileID: 7589334141702404145, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: westExit.doorObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5633693819952495744}
     - target: {fileID: 7589334141702404145, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: westExit.spawnPoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8209053920597187972}
     - target: {fileID: 7589334141702404145, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: northExit.doorObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3596536521479196574}
     - target: {fileID: 7589334141702404145, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: northExit.wallObject
       value: 
@@ -6629,11 +6685,11 @@ PrefabInstance:
     - target: {fileID: 7589334141702404145, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: southExit.doorObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2957653685710870216}
     - target: {fileID: 7589334141702404145, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: southExit.spawnPoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8477178628430394230}
     - target: {fileID: 7589334141702404145, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: eastExit.doorwayObject
       value: 
@@ -6644,7 +6700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8092053622944462059, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.596
+      value: -2.36
       objectReference: {fileID: 0}
     - target: {fileID: 8092053622944462059, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: m_LocalPosition.z

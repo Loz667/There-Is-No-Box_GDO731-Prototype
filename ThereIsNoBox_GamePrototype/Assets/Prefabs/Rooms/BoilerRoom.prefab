@@ -7575,6 +7575,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 274a221ab2ce454449ba603552e4d58b, type: 2}
+    - target: {fileID: 2257977485448064286, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.22
+      objectReference: {fileID: 0}
     - target: {fileID: 2404190102851867041, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -7599,6 +7603,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5064370406785556762, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 5106631751416045856, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.23
+      objectReference: {fileID: 0}
     - target: {fileID: 5344862359090655825, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: m_Name
       value: BoilerRoom
@@ -7607,6 +7619,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: a98a889207a454f48ab79b85673a9804, type: 2}
+    - target: {fileID: 5458036222642574384, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.56
+      objectReference: {fileID: 0}
     - target: {fileID: 5471837285042195148, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

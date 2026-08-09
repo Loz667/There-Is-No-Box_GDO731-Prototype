@@ -29,7 +29,7 @@ public class LabPuzzleLauncher : MonoBehaviour, IRaycastable, IPointerEnterHandl
     
     public void HandleRaycast()
     {
-        if(activePuzzle != null) {Game.UI.OpenLabPuzzle();}
+       Game.UI.OpenLabPuzzle();
        
     }
     
