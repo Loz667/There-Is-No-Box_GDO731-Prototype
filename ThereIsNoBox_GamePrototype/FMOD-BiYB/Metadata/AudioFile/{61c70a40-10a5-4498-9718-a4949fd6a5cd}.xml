@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{61c70a40-10a5-4498-9718-a4949fd6a5cd}">
+		<property name="assetPath">
+			<value>humordome-minimal-ecg-micro-beep-453310.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>6.0342857142857147</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{12c460f7-ddca-45fd-8ecb-252e3f79d199}</destination>
+		</relationship>
+	</object>
+</objects>

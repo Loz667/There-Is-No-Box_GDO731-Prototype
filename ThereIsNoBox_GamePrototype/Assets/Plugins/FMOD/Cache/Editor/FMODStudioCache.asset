@@ -116,7 +116,7 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639209480335980335
+  lastModified: 639216195321719224
   FileSizes:
   - Name: Desktop
     Value: 3362432
@@ -163,7 +163,7 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639209482854988190
+  lastModified: 639216249968138355
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -343,13 +343,15 @@ MonoBehaviour:
   - {fileID: -646400943542321033}
   - {fileID: -5589890642656854430}
   - {fileID: 4014376495714088614}
+  - {fileID: 6895690650241896858}
+  - {fileID: 8010585152998025015}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1917608728381938111}
   StringsBanks:
   - {fileID: 6171030601845811041}
   cacheVersion: 131860
-  cacheTime: 639209483931391671
+  cacheTime: 639216255916846788
   SerializableEventsDict:
   - key: event:/Ambient/Ambient-CoolerBubbles
     index: 0
@@ -393,6 +395,10 @@ MonoBehaviour:
     index: 19
   - key: event:/Ambient/Ambient-Drips
     index: 20
+  - key: event:/Ambient/Ambient-ControlRoom
+    index: 21
+  - key: event:/Ambient/Ambient-ControlRoom2D
+    index: 22
 --- !u!114 &751713181987563428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,10 +441,10 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/Ambient.bank
   Name: Ambient
   StudioPath: bank:/Ambient
-  lastModified: 639209483931391671
+  lastModified: 639216255916846788
   FileSizes:
   - Name: Desktop
-    Value: 2624768
+    Value: 4067392
   Exists: 1
 --- !u!114 &850856089925639992
 MonoBehaviour:
@@ -671,10 +677,10 @@ MonoBehaviour:
   Path: F:/IGD/There is No Box/FMOD-BiYB/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639209482855008139
+  lastModified: 639216249968168258
   FileSizes:
   - Name: Desktop
-    Value: 1864
+    Value: 1960
   Exists: 1
 --- !u!114 &6461614954320477960
 MonoBehaviour:
@@ -703,6 +709,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2000
+--- !u!114 &6895690650241896858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Ambient-ControlRoom
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambient/Ambient-ControlRoom
+  Guid:
+    Data1: 395755162
+    Data2: 1256665852
+    Data3: -1820278870
+    Data4: 157511620
+  Banks:
+  - {fileID: 827759242995204516}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 83496
 --- !u!114 &7156613797782853850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -730,6 +763,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 44000
+--- !u!114 &8010585152998025015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Ambient-ControlRoom2D
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambient/Ambient-ControlRoom2D
+  Guid:
+    Data1: -1817939483
+    Data2: 1188096552
+    Data3: 1781597830
+    Data4: -263720461
+  Banks:
+  - {fileID: 827759242995204516}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 83496
 --- !u!114 &9132624352870078644
 MonoBehaviour:
   m_ObjectHideFlags: 0

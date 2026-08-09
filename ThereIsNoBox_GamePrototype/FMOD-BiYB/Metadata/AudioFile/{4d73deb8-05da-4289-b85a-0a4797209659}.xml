@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{4d73deb8-05da-4289-b85a-0a4797209659}">
+		<property name="assetPath">
+			<value>freesound_community-selection-sounds-73225.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>37.055999999999997</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{12c460f7-ddca-45fd-8ecb-252e3f79d199}</destination>
+		</relationship>
+	</object>
+</objects>

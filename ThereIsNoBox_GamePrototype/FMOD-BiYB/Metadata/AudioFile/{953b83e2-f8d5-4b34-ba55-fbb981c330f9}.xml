@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{953b83e2-f8d5-4b34-ba55-fbb981c330f9}">
+		<property name="assetPath">
+			<value>DrippingWater-1.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>32.914285714285711</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{12c460f7-ddca-45fd-8ecb-252e3f79d199}</destination>
+		</relationship>
+	</object>
+</objects>
