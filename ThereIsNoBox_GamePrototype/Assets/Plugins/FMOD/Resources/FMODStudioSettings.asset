@@ -463,8 +463,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: F:/IGD/There is No Box/FMOD-BiYB/FMOD-BiYB.fspro
-  sourceBankPath: F:/IGD/There is No Box/FMOD-BiYB/Build
+  sourceProjectPath: FMOD-BiYB/FMOD-BiYB.fspro
+  sourceBankPath: FMOD-BiYB/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
