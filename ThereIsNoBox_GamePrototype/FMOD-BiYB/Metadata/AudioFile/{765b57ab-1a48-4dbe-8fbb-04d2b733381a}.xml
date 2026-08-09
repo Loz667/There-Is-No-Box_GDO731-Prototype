@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{765b57ab-1a48-4dbe-8fbb-04d2b733381a}">
+		<property name="assetPath">
+			<value>freesound_community-industrial-heating-vent-73843.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>33.719999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{12c460f7-ddca-45fd-8ecb-252e3f79d199}</destination>
+		</relationship>
+	</object>
+</objects>
