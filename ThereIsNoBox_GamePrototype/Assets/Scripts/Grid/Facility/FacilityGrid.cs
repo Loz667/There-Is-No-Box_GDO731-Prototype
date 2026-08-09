@@ -13,7 +13,7 @@ public class FacilityGrid : MonoBehaviour
         Instance = this;
 
         facilityGrid = new FacilityGridSystem(10, 10, 50f);
-        facilityGrid.CreateDebugObjects(debugGridObject);
+        //facilityGrid.CreateDebugObjects(debugGridObject);
     }
 
     public void AddRoomAtGridPosition(GridPosition position, RoomManager room)

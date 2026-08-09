@@ -39,7 +39,7 @@ public class Character: MonoBehaviour
         //Health, Morale, ActionPoints
         MaxHealth = data.MaxHealth;
         MaxMorale = data.MaxMorale;
-        Name = data.name;
+        Name = data.CharacterName;
         ActionPoints = 0; //Will be set when Character becomes active character
 
         if (data.CharacterPrefab == null) return;

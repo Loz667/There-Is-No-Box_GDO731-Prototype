@@ -1638,6 +1638,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 623a345d5e5462640a87a05077fe1cc2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6982191210778990884}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 623a345d5e5462640a87a05077fe1cc2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8367166063249330984}
   m_SourcePrefab: {fileID: 100100000, guid: 623a345d5e5462640a87a05077fe1cc2, type: 3}
 --- !u!4 &1566263699721747467 stripped
 Transform:
@@ -1670,6 +1673,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020158546, y: 0.00077405944, z: 0.021104129}
   m_Center: {x: 0, y: -0.00007041932, z: 0.010552066}
+--- !u!114 &8367166063249330984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2231441418724878001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68cd57c6749a41099e78f1143f466396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Doorway
+  direction: 3
 --- !u!1001 &1326766969778955484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1886,12 +1902,20 @@ PrefabInstance:
       value: 4.04
       objectReference: {fileID: 0}
     - target: {fileID: 2829743329537193829, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 2829743329537193829, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.61004
+      value: -0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042553621078967003, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.61
       objectReference: {fileID: 0}
     - target: {fileID: 3042553621078967003, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.61003995
+      value: -3.15
       objectReference: {fileID: 0}
     - target: {fileID: 3559033225272117678, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1928,7 +1952,7 @@ PrefabInstance:
     - target: {fileID: 7589334141702404145, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: eastExit.doorObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2414717572849187070}
     - target: {fileID: 7589334141702404145, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: eastExit.wallObject
       value: 
@@ -1936,11 +1960,11 @@ PrefabInstance:
     - target: {fileID: 7589334141702404145, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: westExit.doorObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4595229989852420722}
     - target: {fileID: 7589334141702404145, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: northExit.doorObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3597076700380195902}
     - target: {fileID: 7589334141702404145, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: northExit.wallObject
       value: 
@@ -1948,7 +1972,7 @@ PrefabInstance:
     - target: {fileID: 7589334141702404145, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: southExit.doorObject
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2231441418724878001}
     - target: {fileID: 7589334141702404145, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: eastExit.doorwayObject
       value: 
@@ -1958,8 +1982,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8092053622944462059, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092053622944462059, guid: 415531296f8034047baee49b3ef57ee2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.61004
+      value: 0.51
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -2157,6 +2185,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 623a345d5e5462640a87a05077fe1cc2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5975550944857182705}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 623a345d5e5462640a87a05077fe1cc2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7607213052528301543}
   m_SourcePrefab: {fileID: 100100000, guid: 623a345d5e5462640a87a05077fe1cc2, type: 3}
 --- !u!1 &2414717572849187070 stripped
 GameObject:
@@ -2184,6 +2215,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020158546, y: 0.0007740592, z: 0.021104122}
   m_Center: {x: 0, y: -0.0000704193, z: 0.010552063}
+--- !u!114 &7607213052528301543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2414717572849187070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68cd57c6749a41099e78f1143f466396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Doorway
+  direction: 2
 --- !u!4 &3083026730762494532 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 623a345d5e5462640a87a05077fe1cc2, type: 3}
@@ -2367,6 +2411,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 623a345d5e5462640a87a05077fe1cc2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8243715538652540795}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 623a345d5e5462640a87a05077fe1cc2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8434122692725348549}
   m_SourcePrefab: {fileID: 100100000, guid: 623a345d5e5462640a87a05077fe1cc2, type: 3}
 --- !u!4 &3787063262056562888 stripped
 Transform:
@@ -2399,6 +2446,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020158546, y: 0.0007740592, z: 0.021104122}
   m_Center: {x: 0, y: -0.0000704193, z: 0.010552063}
+--- !u!114 &8434122692725348549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4595229989852420722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68cd57c6749a41099e78f1143f466396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Doorway
+  direction: 4
 --- !u!1001 &3812910954633596771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2746,6 +2806,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 623a345d5e5462640a87a05077fe1cc2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4985372179725540507}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 623a345d5e5462640a87a05077fe1cc2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7847171580714440307}
   m_SourcePrefab: {fileID: 100100000, guid: 623a345d5e5462640a87a05077fe1cc2, type: 3}
 --- !u!1 &3597076700380195902 stripped
 GameObject:
@@ -2773,6 +2836,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020158546, y: 0.00077405915, z: 0.02110412}
   m_Center: {x: 0, y: -0.00007041929, z: 0.010552062}
+--- !u!114 &7847171580714440307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3597076700380195902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68cd57c6749a41099e78f1143f466396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Doorway
+  direction: 1
 --- !u!4 &4224572850491537028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 623a345d5e5462640a87a05077fe1cc2, type: 3}
