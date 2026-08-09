@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9b36042-ff5a-43f5-a8c3-bfba2d43307f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ThereIsNoBox_GamePrototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ThereIsNoBox_GamePrototype/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/TrackerLight.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/TrackerLight.prefab" afterDir="false" />
-    </list>
+    <list default="true" id="f9b36042-ff5a-43f5-a8c3-bfba2d43307f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -145,7 +142,7 @@
       <workItem from="1785924483168" duration="1150000" />
       <workItem from="1785925664921" duration="5884000" />
       <workItem from="1786026324363" duration="1044000" />
-      <workItem from="1786273244277" duration="2215000" />
+      <workItem from="1786273244277" duration="2732000" />
     </task>
     <servers />
   </component>
